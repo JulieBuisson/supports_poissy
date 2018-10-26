@@ -1,0 +1,998 @@
+# Javascript les bases.
+
+## Où écrire notre code JavaScript?
+On va pouvoir placer du code JavaScript à trois endroits différents :
+Du JavaScript dans l’élément head d’une page HTML
+Dans ce cas, il faudra placer le JavaScript à l’intérieur d’un élément script.
+On placera généralement l’élément script à la fin de notre élément head.
+
+```html
+<Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Les boucles</title>
+    <script>
+        alert("hello");
+    </script>
+</head>
+<body>
+```
+
+Du JavaScript dans l’élément body d’une page HTML
+Dans ce cas là également, nous utiliserons un élément script et préférerons le placer à la fin de notre page.
+
+```html
+<Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Les boucles</title>
+</head>
+<body>
+    <script>
+        alert("hello");
+    </script>
+</body>
+```
+Notez que lorsqu’on écrit du JavaScript dans un fichier HTML, que ce soit dans l’élément head, le body ou les deux, on peut utiliser autant d’éléments script que l’on veut. Cependant, pour des raisons évidentes de performance et de clarté, on essaie souvent de placer tout notre code JavaScript dans un même élément script. Si vous choisissez d’écrire plusieurs scripts dans une même page HTML, ceux-ci serons lus linéairement, c’est-à-dire dans leur ordre d’écriture.
+
+Finalement, on peut écrire notre code JavaScript dans un fichier séparé portant l’extension « .js ».
+C’est très souvent la méthode recommandée dans le cas de gros projets car elle permet une meilleure maintenabilité du code grâce à la séparation des langages, et car on va pouvoir réutiliser un même code JavaScript dans plusieurs fichiers HTML.
+Dans ce cas, nous allons devoir lier nos fichiers HTML et JavaScript en utilisant à nouveau un élément script et son attribut src.
+En valeur de l’attribut src, nous allons indiquer le chemin relatif du fichier .js par rapport au fichier .html. Si nos deux fichiers sont dans le même dossier, par exemple, il suffira d’indiquer le nom du fichier JavaScript.
+
+```html
+<Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Les boucles</title>
+    <script src="script.js"></script>
+</head>
+```
+
+## Synthaxe et commentaire
+
+Au niveau de la syntaxe générale du JavaScript, retenez bien que chaque instruction en JavaScript doit être terminée par un point virgule.
+Indenter en JavaScript
+L’indentation correspond au fait de décaler certaines lignes de code par rapport à d’autres. Cela est généralement utilisé pour rendre son code plus lisible et donc plus simple à comprendre.
+Pour savoir quand indenter, il suffit de penser en terme de hiérarchie comme on le faisait déjà en HTML.
+Une bonne pratique est d'effectuer un retrait vers la droite équivalent à une tabulation à chaque fois qu'on écrit une nouvelle ligne de code à l'intérieur d'une instruction JavaScript. Nous aurons l'occasion d'illustrer cela plus tard.
+Les commentaires en JavaScript
+Comme pour l’immense majorité des langages de programmation, on va également pouvoir commenter en JavaScript.
+Commenter, c’est laisser des messages ou des indications au sein de son code qui servent à expliquer le code en question.
+Ces indications ne seront pas lues par le navigateur et seront donc invisibles pour les visiteurs (sauf s’ils affichent le code source de la page).
+Commenter va donc servir aux développeurs à se repérer plus facilement dans un script, à le lire et à le comprendre plus vite.
+Cela peut être utile à la fois pour vous même si vous travaillez sur des projets complexes ou pour d’autres développeurs si vous êtes amené à distribuer votre code un jour ou l’autre.
+En JavaScript, il existe deux types de commentaires qui vont s’écrire différemment:
+les commentaires mono-ligne
+
+```js
+// Je suis un commentaire mono-ligne
+```
+
+les commentaires multi-lignes.
+
+```js
+/*
+je suis
+un commentaire
+multi-ligne
+*/
+```
+
+Notez que la syntaxe des commentaires multi-lignes peut être utilisée pour écrire un commentaire mono-ligne. Vous pouvez donc vous contenter de n’utiliser que cette syntaxe.
+
+## Les Variables
+Une variable JavaScript est un conteneur servant à stocker temporairement une information, comme un nombre ou une chaîne de caractères (c’est-à-dire un texte) par exemple. Comme son nom l’indique, le propre d’une variable est de pouvoir varier, c’est-à-dire de pouvoir stocker différentes valeurs dans le temps, en « écrasant » sa valeur précédente. En JavaScript, on déclare une variable avec le mot clef « var » suivi du nom de notre variable. Chaque nouvelle variable doit avoir un nom unique qu’on appelle également en anglais « identifier ».
+
+Le nom des variables en JavaScript
+On doit observer différentes règles lorsque l’on nomme une variable en JavaScript :
+
+    - Le nom des variables doit commencer par une lettre ;
+    - Le nom ne peut contenir que des lettres (non accentuées), des chiffres ou les signes « _ » et « $ » ;
+    -Le nom des variables est sensible à la casse (« a » est différent de « A ») ;
+    -Le JavaScript possède des mots « réservés » qu’on ne peut utiliser pour créer une variable. Par exemple, le mot « var » est un mot réservé.
+
+Déclarer une variable en JavaScript
+Il existe différentes façons de déclarer une variable en JavaScript. On va pouvoir:
+
+```js
+// Déclarer une variable et lui assigner une valeur immédiatement ;
+var x = 25;
+// Déclarer une variable sans lui assigner de valeur et lui assigner une valeur plus tard ;
+var y;
+y = "toto";
+// Déclarer plusieurs variables en même temps.
+var z = 1, a = true, b = "sam";
+```
+
+Deux remarques importantes : les types de valeurs et le signe « = »
+Revenons au code ci-dessus afin de faire deux remarques essentielles pour la suite et pour votre compréhension du JavaScript. La première concerne les valeurs stockées par les variables. Vous pouvez remarquer que selon le type de valeur stockée (texte, nombre ou booléen), nous allons déclarer nos variables de façon sensiblement différente (utilisation ou non de guillemets ou d’apostrophes).
+
+La deuxième remarque concerne le signe « = » (signe égal).
+Faites très attention à la signification de ce signe en JavaScript et en programmation en général, car ce n’est pas le égal mathématique que vous connaissez. En effet, en JavaScript, le signe égal est un opérateur d'affectation et non pas d’égalité. Cela veut dire que ce signe va nous servir à affecter (ou assigner) une valeur à une variable, mais non pas que la variable est égale à sa valeur. Ainsi, on va pouvoir affecter différentes valeurs à une même variable dans le temps, chose qu’il est strictement impossible de faire avec un égal mathématique.
+
+## Les types de valeurs
+
+Les types de valeurs des variables
+Les variables en JavaScript peuvent stocker différents types de valeurs.
+Par simplification, on parlera souvent (à tort) de « types de variables » au lieu de parler de « types de valeurs stockées par les variables ».
+Les types de valeurs vont avoir une influence sur notre code, puisqu’on ne stockera pas de la même façon un chiffre ou une chaîne de caractères (un texte) par exemple dans une variable.
+Nous ne pourrons pas non plus effectuer les mêmes opérations sur les variables selon le type de valeurs qu’elles stockent.
+Dans cette partie, nous allons faire un tour d’horizon des types de valeurs les plus courants que peuvent stocker nos variables en JavaScript.
+
+- Le type de valeurs Number
+    Le type de valeurs Number va représenter tout nombre ou chiffre, qu’il soit positif, négatif, entier ou à virgule.
+    Pour affecter une valeur de type Number à une variable, on n’utilise ni guillemet ni apostrophe.
+    Faites attention : lorsque nous codons nous utilisons toujours des notations anglo-saxonnes, ce qui signifie qu’il faut remplacer nos virgules par des points pour les nombres décimaux.
+
+```js
+var t = 10;
+var f = 1.2;
+var h = -6;
+```
+
+- Le type de valeurs String
+    Le type de valeurs String va représenter les chaînes de caractères, c’est-à-dire les textes.
+    Si l’on veut stocker une chaîne de caractères dans une variable, il faut entourer notre chaîne par des apostrophes ou des guillemets.
+    Ce sont justement ces apostrophes ou guillemets qui vont indiquer au JavaScript que l’on stocke une valeur de type String.
+
+```js
+var r = 'sam';
+var d = "qwe";
+```
+
+Au niveau des apostrophes / guillemets, vous pouvez choisir les uns ou les autres selon votre préférence. Cependant, si la valeur stockée contient elle même des apostrophes ou des guillemets, il faudra les échapper au moyen d’un antislash selon ce que vous aurez choisi pour entourer la valeur comme ceci:
+
+```js
+var q = "Je vis dans le \"92\"";
+var u = 'L\'école de ma ville';
+```
+
+Une nouvelle fois, comprenez bien que c’est le fait de mettre des guillemets ou des apostrophes qui va faire qu’une valeur va être considérée comme une valeur de type String. Ainsi, même un nombre sera considéré comme étant de type String, c’est-à-dire comme une chaîne de caractères si on l’entoure de guillemets ou d’apostrophes. Faites bien attention à cela, car ça va avoir une grande influence sur les manipulations que l’on va pouvoir faire sur telle ou telle variable !
+
+- Le type de valeurs Boolean
+    Une variable en JavaScript peut encore stocker une valer de type Boolean, c’est-à-dire un booléen. Un booléen, en algèbre, est une valeur binaire (soit 0, soit 1). En informatique, un booléen va être soit la valeur true (vrai), soit la valeur false (faux).
+    Ce type de valeur peut sembler plus compliqué à appréhender à première vue. Pas d’inquiétude, nous allons souvent l’utiliser par la suite car il va nous être très utile pour effectuer des tests et vérifier si une condition est vérifiée (true) ou non (false).
+    Une nouvelle fois, faites bien attention : pour qu’une variable stocke bien un booléen, il faut lui faire stocker la valeur true ou false, sans guillemets ou apostrophes.
+    Si vous rajoutez des guillemets ou des apostrophes, la variables stockera alors la chaîne de caractères true ou la chaîne de caractères false.
+
+- Autres valeurs stockées en JavaScript
+    Les variables en JavaScript peuvent stocker bien d’autres valeurs n'étant pas de type String, Number ou Boolean. Parmi les autres valeurs remarquables, on peut citer la valeur « null », qui correspond à la non connaissance à priori de la valeur ainsi que la valeur « undefined » qui correspond au fait de ne pas avoir défini de valeur pour notre variable. Une variable peut encore contenir la valeur « NaN » qui signifie « Not a Number » (« n’est pas un nombre » en Français).
+
+```js
+var n = null;
+var u = undefined;
+var nan = NaN;
+``` 
+
+- Changer le type d’une valeur stockée dans une variable
+    Notez que vous pouvez tout à fait affecter une nouvelle valeur d’un autre type à une variable JavaScript. La nouvelle valeur écrasera l’ancienne, tout simplement.
+
+```js
+var x = 4;
+x = "quatre";
+```
+
+- Tester le type de valeur d’une variable
+    Pour tester le type de la valeur que contient une variable, on utilise généralement la fonction typeof(). Nous étudierons les fonctions en détail plus tard dans ce cours.
+    Attention cependant, cette fonction renvoie parfois des résultats contestables sur certaines valeurs.
+    Voyons immédiatement un exemple d’utilisation de typeof() ensemble. Pour afficher le résultat de typeof(), nous allons l’utiliser avec une instruction alert().
+    Le script ci-dessous affichera tous les résultats au sein d’une même instruction alert(). Pour faire cela, j’utilise ce qu’on appelle la concaténation (avec les « + ») et la notation \n qui sert à créer un retour à la ligne en JavaScript.
+
+```js
+var text = "Bonjour";
+alert(typeof(text));
+```
+
+## Des opérations mathématiques simples sur les variables
+
+Le grand avantage des variables est avant tout que l’on va pouvoir les manipuler et notamment effectuer des opérations entre variables. Pour des variables stockant des valeurs de type Number, on va donc pouvoir effectuer les mêmes opérations qu’avec des nombres en mathématiques. Ainsi, nous allons pouvoir additionner (les valeurs de) deux variables entre elles, les soustraire l’une à l’autre, les multiplier entre elles, etc.
+
+```js
+var x = 5, y = 10, z = -2;
+x = x + 1;
+x = x - 4;
+var mult = y * x;
+var div = y / z;
+/*
+Le modulo représente le reste de la division entière d'un nombre par un autre.
+Par exemple si on divise 13 par 3 et qu'on conserve la partie entière, le résultat est 4 et il reste 1. 1 est donc le modulo.
+*/
+var mod = 13 % 3;
+```
+
+- Priorités de calcul
+    Faites attention à respecter les priorités de calcul lorsque vous effectuez des opérations sur les variables. En réalité, c’est très simple puisque ce sont les mêmes qu’en mathématiques : les parenthèses sont prioritaires sur toute autre opération, puis viennent la multiplication, la division et le modulo et finalement l’addition et la soustraction.
+
+```js
+/*
+Ici, on commence par calculer ce qui est entre parenthèses, c’est-à-dire 4 + z ce qui nous donne 4 + (-2) = 2.
+Ensuite, on divise donc la valeur contenue dans y par 2 ce qui nous donne 5 et on calcule le modulo de 5 par 3 qui est égal à 2.
+Finalement, on additionne la valeur contenue dans x et 2 pour arriver au résultat final : 7.
+Faites donc bien attention aux priorités de calcul lorsque vous effectuez des manipulations sur les variables, car le résultat peut s’avérer totalement différent de celui attendu si vous n’en tenez pas compte.
+*/
+var priorite = x + y / (4 + z) % 3;
+```
+
+- Opérations simplifiées sur les variables JavaScript
+    Sachez que l’on peut simplifier l’écriture de certaines opérations mathématiques sur les variables en JavaScript, afin de gagner en temps, en performance et en clarté.
+    Voici les notations simplifiées ci-dessous avec leur équivalent en « version longue »
+
+```js
+// x = x + 1
+x += 1;
+// x = x - 1
+x -= 1;
+// x = x * 1
+x *= 1;
+// x = x / 1
+x /= 1;
+// x = x % 1
+x %= 1;
+```
+
+## Concaténer signifie tout simplement mettre bout à bout deux chaînes de caractères afin d’en former une troisième, nouvelle.
+
+Concaténer, c’est donc « additionner » des chaînes de caractères. En JavaScript, on va pouvoir concaténer grâce à l’opérateur « + ». Evidemment, nous allons pouvoir appliquer cet opérateur directement à nos variables afin de concaténer leurs contenus respectifs.
+
+```js
+var prenom = "Samba", espace = ' ', age = 30;
+// On peut contaténer et stocker le résultat dans une variable
+var moi = prenom + espace + moi;
+//On peut contaténer des valeurs entre elles
+var toi = 'Nom' + ' ' + '28';
+// On peut contaténer des valeurs et des variables
+var music = "Jazz";
+var hobbie = "J'aime le ' + music;
+// On utilise également la concaténation pour tous afficher dans une même alert
+alert(
+    "Variable moi " + moi +
+    "\nVariable toi " + toi +
+    "\nVariable hobbie " + hobbie
+);
+```
+
+- Additionner un nombre et une chaîne de caractères
+    Si l’on tente « d’additionner » un nombre et une chaîne de caractères, tout ce qu’il y a derrière la chaîne de caractères sera également considéré comme une chaine de caractères par le JavaScript.
+```js
+var x = 4 + 2 + "1";
+var y = "1" + 2 + 4;
+var z = 2 + "un" + 4;
+```
+
+Ici, pour notre variable x, le JavaScript va commencer par additionner 2 et 4 naturellement, puis va ajouter la chaîne de caractères « 1 » au résultat (c’est-à-dire à 6). Cela donne donc le résultat « 61 ».
+Dans le second cas, le JavaScript va considérer tout ce qui se trouve derrière la chaîne de caractères « 1 » comme une chaîne de caractères, et va donc concaténer 1, 2 et 4 pour donner « 124 ».
+On peut également observer plus clairement cela avec notre troisième variable z, qui va stocker « 2un4 ».
+
+## Les conditions
+
+En JavaScript, nous allons souvent vouloir effectuer différentes actions selon la valeur d’un paramètre, afin de dynamiser notre site et d’y ajouter une certaine interaction. Par exemple, on va vouloir afficher le message « Bonjour » si il est moins de 18h ou « Bonsoir » dans le cas contraire, ou encore afficher le message « Bonjour Pierre » si votre visiteur à indiqué au préalable qu’il s’appelait Pierre. Une façon simple de faire cela est d’utiliser les conditions.
+
+Les conditions vont s’articuler autour d’un test. Généralement, nous allons comparer la valeur contenue dans une variable à une certaine autre valeur. Selon le résultat du test, nous allons ensuite pouvoir exécuter un bloc de code plutôt qu’un autre à l’intérieur de notre condition.
+
+- Les opérateurs de comparaison
+    Pour effectuer des comparaiosns à l’intérieur d’une condition, nous allons avoir besoin d’opérateurs de comparaison.
+    Ces opérateurs sont représentés par les symboles suivants:
+    == 	Est égal à (en valeur)
+    != 	Est différent de (en valeur)
+    === 	Est égal à (en valeur et en type)
+    !== 	Est différent de (en valeur ou en type)
+    < 	Est strictement inférieur à
+    <= 	Est inférieur ou égal à
+    > 	Est strictement supérieur à
+    >= 	Est supérieur ou égal à
+
+    Commencez par noter que pour tester l’égalité, on n’utilise pas le signe « = » qui, rappelons le, est un opérateur d’affectation et non d’égalité au sens mathématique du terme, mais le double égal (==).
+    Ensuite, deux symbole peuvent vous poser problème : le triple égal et le point d’exclamation suivi de deux signes égal.
+    En utilisant seulement le double égal, nous n’allons tester que l’égalité sur la valeur. Ainsi, si l’on tente de comparer le chiffre 4 à la chaîne de caractères « 4 » de cette manière, le JavaScript renverra le booléen « true » (vrai).
+    En revanche, si l’on utilise le triple égal, on va tester à la fois l’égalité sur les valeurs et sur le type de valeurs. Ainsi, si l’on compare le chiffre 4 à la chaîne de caractère « 4 », le JavaScript renverra « false » (faux).
+
+- Le JavaScript et les comparaisons de valeurs
+    Afin de bien comprendre comment fonctionnent les conditions, il est indispensable au préalable que vous compreniez comment le JavaScript effectue des comparaisons entre les valeurs.
+    Sans cette connaissance, il est impossible de savoir comment une condition marche véritablement.
+    Tout d’abord, vous devez bien comprendre que le JavaScript sait comparer différentes valeurs entre elles.
+    A chaque fois que l’on va comparer deux valeurs, le JavaScript va renvoyer un booléen, c’est-à-dire soit « true », soit « false », selon que la comparaison soit vraie ou pas.
+    Par exemple, si l’on écrit en JavaScript « 7 < 14 », le JavaScript renverra « true » car 7 est bien inférieur à 14.
+    Dans nos conditions, nous n’allons donc pas directement tester si une valeur est inférieure, égale ou supérieure à une autre, mais tester si le JavaScript nous renvoie true ou false.
+    C’est une distinction très importante que malheureusement très peu de développeurs font ou comprennent.
+
+    ```js
+    var x = 7, y = 14;
+    var vrai = x < y;
+    var faux = 14 <= 7;
+    var egalValeur = 4 == "4";
+    var egalValeurType = 4 === "4";
+    var diffValeur = 4 != "4";
+    var diffValeurType = 4 !== "4";
+    ```
+
+    - La condition if
+
+    « If » en anglais signifie « si ». Avec cette première structure conditionnelle, on va pouvoir tester si une valeur répond à un certain critère, et exécuter un bloc de code le cas échéant.
+
+    ```js
+    var heure = 15;
+
+    if(heure <= 18){
+        alert("Bonjour");
+    }
+    ```
+
+    - La condition if…else (« si… sinon » en Français) va nous permettre d’exécuter un bloc de code si le JavaScript renvoie bien la valeur attendue, et un autre bloc de code s’il ne renvoie pas la valeur attendue.
+
+    ```js
+    var heure = 15;
+
+    if(heure <= 18){
+        alert("Bonjour");
+    } else {
+        alert("Bonsoir");
+    }
+    ```
+
+    - La condition if…else if…else
+
+    La condition if…else if…else signifie « si… sinon si… sinon » en Français.
+    Cette condition va être très puissante et très pratique puisqu’elle va nous permettre de gérer autant de cas que l’on souhaite et d’exécuter un code différent pour chaque nouveau cas créé. En effet, on va pouvoir insérer autant de else if que l’on veut au sein de notre condition pour pouvoir gérer un nombre infini de cas.
+    ```js
+    var heure = 9;
+
+    if(heure <= 12){
+        alert("C'est le matin");
+    } else if(heure == 12) {
+        alert("C'est le midi");
+    } else if(heure <= 18) {
+        alert("C'est l'après-midi");
+    } else {
+        alert("C'est le soir");
+    }
+    ```
+
+    - Limitations et solutions
+
+    Cependant, ce code est encore loin d’être parfait. En effet, certains d’entre vous se demandent peut être comment le JavaScript fait pour savoir si « c’est le matin » ou « c’est l’après midi » lorsque notre variable stocke une valeur inférieure à 12 ?
+    La réponse est simple : il ne le sait pas. Le code JavaScript va simplement être lu de façon linéaire et dès qu’un test va être évalué à true, nous allons sortir de la condition.
+    Dans l’exemple précédent, par exemple, notre variable heure stocke le chiffre 9. A priori, le JavaScript va donc renvoyer true pour « heure < 12 » et pour « heure <= 18 ».
+    Comme le code est lu linéairement, le premier cas rencontré revoyant true va être « heure < 12 ». Le JavaScript va donc renvoyer « c’est le matin ».
+    Cependant, si nous avions construit notre condition différemment, le JavaScript aurait renvoyé le « mauvais » message.
+
+    ```js
+    var heure = 9;
+
+    if(heure <= 18){
+        alert("C'est l'après-midi");
+    } else if(heure == 12) {
+        alert("C'est le midi");
+    } else if(heure <= 12) {
+        alert("C'est le matin");
+    } else {
+        alert("C'est le soir");
+    }
+    ```
+
+    Second gros problème de cette condition : nous ne prenons pas en charge les valeurs aberrantes. Dans le cas de l’heure, cela peut sembler superflu, mais imaginez que vous demandiez à vos visiteurs de rentrer l’heure qu’ils souhaitent. Dans notre cas, nous pourrions déjà utiliser deux structures conditionnelles if pour filtrer le type de données reçues.
+
+    ```js
+    var heure = 9;
+    if(typeof(heure) == "number"){
+        if(heure <= 18){
+            alert("C'est l'après-midi");
+        } else if(heure == 12) {
+            alert("C'est le midi");
+        } else if(heure <= 12) {
+            alert("C'est le matin");
+        } else {
+            alert("C'est le soir");
+        }
+    } else {
+        alert("Mauvaise valeur");
+    }
+    ```
+    Ici, on utilise typeof() pour tester le type de la valeur contenue dans notre variable heure dans un premier if. Ensuite, on compare la valeur renvoyée par notre fonction à la valeur "number" et si le JavaScript renvoie true suite à cette comparaison, on exécute le code contenu dans ce premier if. Si typeof() renvoie bien la valeur number, on rentre donc dans notre premier if et de nouveaux tests sont effectués au sein de ce if. Sinon, on arrive dans le dernier else et on affiche « mauvaise valeur ».
+
+## Les opérateurs logiques
+
+En JavaScript, il existe trois opérateurs logiques très utilisés : l’opérateur logique « ET », l’opérateur logique « OU » et l’opérateur logique « CONTRAIRE » ou « NON ». Chacun de ces opérateurs est représenté par un symbole.
+
+    ET (AND) 	&&
+    OU (OR) 	||
+    NON 	!
+
+    - Opérateurs logiques et conditions
+
+    Nous allons pouvoir utiliser ces opérateurs logiques au sein même de nos conditions, afin de pouvoir par exemple effectuer plusieurs comparaisons au sein d’un même test.
+    Plus précisément, l’opérateur logique « ET » va nous permettre de créer un intervalle de comparaison pour une variable.
+    On va par exemple pouvoir tester si la valeur contenue dans une variable heure est comprise entre 0 et 12.
+    Grâce à cet opérateur, nous allons pouvoir lever l’ambiguïté sur certaines valeurs (ambiguïté vue dans la partie précédente) en ne travaillant plus qu’avec des intervalles.
+
+    ```js
+    var heure = 9;
+
+    if(heure >= 0 && heure <= 12){
+        alert("C'est le matin");
+    } else if(heure === 12) {
+        alert("C'est le midi");
+    } else if(heure > 12 && heure <= 24) {
+        alert("C'est le soir");
+    } else {
+        alert("Valeur invalide");
+    }
+    ```
+
+    L’opérateur « OU » va nous permettre de comparer la valeur d’une variable à deux valeurs différentes. Si l’une des deux comparaisons affiche le résultat attendu, le reste du code sera exécuté. On peut par exemple tester si la valeur contenue dans une variable heure est inférieure à 0 ou supérieure à 24.
+
+    ```js
+    var heure = 9;
+
+    if(heure < 0 || heure > 24){
+        alert("Valeur invalide");
+    } else {
+        alert("Valeur valide");
+    }
+    ```
+
+    Finalement, l’opérateur logique « NON » va nous permettre de nier une comparaison. Ainsi, des comparaisons évaluées de base à false vont être évaluées à true et inversement. Dans l'exemple ci-dessus, le deuxième jeu de parenthèses n'est pas strictement nécessaire. Je les ai rajoutées afin de bien comprendre sur quoi porte l'opérateur « NON ».
+
+    ```js
+    var heure = 9;
+
+    if(!(heure <= 7)){
+        alert("Il est plus de 7");
+    } else {
+        alert("Il est moins de 7");
+    }
+    ```
+
+    - L’évaluation des valeurs
+
+    Il y a un autre point que vous devez connaître afin de véritablement comprendre les conditions : une valeur peut être évaluée à true ou false même sans opérateur de comparaison. Ainsi, toute valeur différente de null, undefined, NaN, 0 et la chaîne de caractères vide sera évaluée par défaut par le JavaScript à true. Savoir cela nous permet de comprendre bien des choses et de résoudre certaines situations en JavaScript.
+
+    ```js
+    var x = 6, y = '';
+    if(x){
+        alert("x est évalué a true par javascript");
+    }
+    if(y){
+        alert("y est évalué a true par javascript");
+    } eles {
+        alert("y est évalué a false par javascript");
+    }
+    ```
+
+## Le switch
+
+Parfois, dans vos conditions, vous voudrez pouvoir dissocier de nombreux cas afin de traiter chacun d’entre eux différemment. Par exemple, on peut imaginer renvoyer un message différent à des élèves selon la note obtenue par ceux-ci à un test. Pour faire cela, on peut bien évidemment toujours utiliser un if… else if… else. Cependant, il va parfois être plus judicieux d’utiliser une instruction switch. Le switch est semblable à une condition dans laquelle on va pouvoir générer autant d’issues que l’on souhaite. Attention cependant à une limitation importante du switch : cette instruction ne peut tester que l’égalité de valeurs et non pas l’inégalité.
+
+```js
+var heure = 10;
+switch(heure){
+    case 8:
+        alert("Il est 8H");
+        break;
+    case 9:
+        alert("Il est 9");
+        break;
+    case 10:
+        alert("Il est 10H");
+        break;
+    case 11:
+        alert("Il est 11H");
+        break;
+    case 12 :
+        alert("Il est 12H");
+        break;
+    default :
+        alert("Error! !!");
+}
+```
+
+## Les boucles        # Javascript les bases.
+
+        ## Où écrire notre code JavaScript?
+        On va pouvoir placer du code JavaScript à trois endroits différents :
+        Du JavaScript dans l’élément head d’une page HTML
+        Dans ce cas, il faudra placer le JavaScript à l’intérieur d’un élément script.
+        On placera généralement l’élément script à la fin de notre élément head.
+        
+        ```html
+        <Doctype html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Les boucles</title>
+            <script>
+                alert("hello");
+            </script>
+        </head>
+        <body>
+        ```
+        
+        Du JavaScript dans l’élément body d’une page HTML
+        Dans ce cas là également, nous utiliserons un élément script et préférerons le placer à la fin de notre page.
+        
+        ```html
+        <Doctype html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Les boucles</title>
+        </head>
+        <body>
+            <script>
+                alert("hello");
+            </script>
+        </body>
+        ```
+        Notez que lorsqu’on écrit du JavaScript dans un fichier HTML, que ce soit dans l’élément head, le body ou les deux, on peut utiliser autant d’éléments script que l’on veut. Cependant, pour des raisons évidentes de performance et de clarté, on essaie souvent de placer tout notre code JavaScript dans un même élément script. Si vous choisissez d’écrire plusieurs scripts dans une même page HTML, ceux-ci serons lus linéairement, c’est-à-dire dans leur ordre d’écriture.
+        
+        Finalement, on peut écrire notre code JavaScript dans un fichier séparé portant l’extension « .js ».
+        C’est très souvent la méthode recommandée dans le cas de gros projets car elle permet une meilleure maintenabilité du code grâce à la séparation des langages, et car on va pouvoir réutiliser un même code JavaScript dans plusieurs fichiers HTML.
+        Dans ce cas, nous allons devoir lier nos fichiers HTML et JavaScript en utilisant à nouveau un élément script et son attribut src.
+        En valeur de l’attribut src, nous allons indiquer le chemin relatif du fichier .js par rapport au fichier .html. Si nos deux fichiers sont dans le même dossier, par exemple, il suffira d’indiquer le nom du fichier JavaScript.
+        
+        ```html
+        <Doctype html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Les boucles</title>
+            <script src="script.js"></script>
+        </head>
+        ```
+        
+        ## Synthaxe et commentaire
+        
+        Au niveau de la syntaxe générale du JavaScript, retenez bien que chaque instruction en JavaScript doit être terminée par un point virgule.
+        Indenter en JavaScript
+        L’indentation correspond au fait de décaler certaines lignes de code par rapport à d’autres. Cela est généralement utilisé pour rendre son code plus lisible et donc plus simple à comprendre.
+        Pour savoir quand indenter, il suffit de penser en terme de hiérarchie comme on le faisait déjà en HTML.
+        Une bonne pratique est d'effectuer un retrait vers la droite équivalent à une tabulation à chaque fois qu'on écrit une nouvelle ligne de code à l'intérieur d'une instruction JavaScript. Nous aurons l'occasion d'illustrer cela plus tard.
+        Les commentaires en JavaScript
+        Comme pour l’immense majorité des langages de programmation, on va également pouvoir commenter en JavaScript.
+        Commenter, c’est laisser des messages ou des indications au sein de son code qui servent à expliquer le code en question.
+        Ces indications ne seront pas lues par le navigateur et seront donc invisibles pour les visiteurs (sauf s’ils affichent le code source de la page).
+        Commenter va donc servir aux développeurs à se repérer plus facilement dans un script, à le lire et à le comprendre plus vite.
+        Cela peut être utile à la fois pour vous même si vous travaillez sur des projets complexes ou pour d’autres développeurs si vous êtes amené à distribuer votre code un jour ou l’autre.
+        En JavaScript, il existe deux types de commentaires qui vont s’écrire différemment:
+        les commentaires mono-ligne
+        
+        ```js
+        // Je suis un commentaire mono-ligne
+        ```
+        
+        les commentaires multi-lignes.
+        
+        ```js
+        /*
+        je suis
+        un commentaire
+        multi-ligne
+        */
+        ```
+        
+        Notez que la syntaxe des commentaires multi-lignes peut être utilisée pour écrire un commentaire mono-ligne. Vous pouvez donc vous contenter de n’utiliser que cette syntaxe.
+        
+        ## Les Variables
+        Une variable JavaScript est un conteneur servant à stocker temporairement une information, comme un nombre ou une chaîne de caractères (c’est-à-dire un texte) par exemple. Comme son nom l’indique, le propre d’une variable est de pouvoir varier, c’est-à-dire de pouvoir stocker différentes valeurs dans le temps, en « écrasant » sa valeur précédente. En JavaScript, on déclare une variable avec le mot clef « var » suivi du nom de notre variable. Chaque nouvelle variable doit avoir un nom unique qu’on appelle également en anglais « identifier ».
+        
+        Le nom des variables en JavaScript
+        On doit observer différentes règles lorsque l’on nomme une variable en JavaScript :
+        
+            - Le nom des variables doit commencer par une lettre ;
+            - Le nom ne peut contenir que des lettres (non accentuées), des chiffres ou les signes « _ » et « $ » ;
+            -Le nom des variables est sensible à la casse (« a » est différent de « A ») ;
+            -Le JavaScript possède des mots « réservés » qu’on ne peut utiliser pour créer une variable. Par exemple, le mot « var » est un mot réservé.
+        
+        Déclarer une variable en JavaScript
+        Il existe différentes façons de déclarer une variable en JavaScript. On va pouvoir:
+        
+        ```js
+        // Déclarer une variable et lui assigner une valeur immédiatement ;
+        var x = 25;
+        // Déclarer une variable sans lui assigner de valeur et lui assigner une valeur plus tard ;
+        var y;
+        y = "toto";
+        // Déclarer plusieurs variables en même temps.
+        var z = 1, a = true, b = "sam";
+        ```
+        
+        Deux remarques importantes : les types de valeurs et le signe « = »
+        Revenons au code ci-dessus afin de faire deux remarques essentielles pour la suite et pour votre compréhension du JavaScript. La première concerne les valeurs stockées par les variables. Vous pouvez remarquer que selon le type de valeur stockée (texte, nombre ou booléen), nous allons déclarer nos variables de façon sensiblement différente (utilisation ou non de guillemets ou d’apostrophes).
+        
+        La deuxième remarque concerne le signe « = » (signe égal).
+        Faites très attention à la signification de ce signe en JavaScript et en programmation en général, car ce n’est pas le égal mathématique que vous connaissez. En effet, en JavaScript, le signe égal est un opérateur d'affectation et non pas d’égalité. Cela veut dire que ce signe va nous servir à affecter (ou assigner) une valeur à une variable, mais non pas que la variable est égale à sa valeur. Ainsi, on va pouvoir affecter différentes valeurs à une même variable dans le temps, chose qu’il est strictement impossible de faire avec un égal mathématique.
+        
+        ## Les types de valeurs
+        
+        Les types de valeurs des variables
+        Les variables en JavaScript peuvent stocker différents types de valeurs.
+        Par simplification, on parlera souvent (à tort) de « types de variables » au lieu de parler de « types de valeurs stockées par les variables ».
+        Les types de valeurs vont avoir une influence sur notre code, puisqu’on ne stockera pas de la même façon un chiffre ou une chaîne de caractères (un texte) par exemple dans une variable.
+        Nous ne pourrons pas non plus effectuer les mêmes opérations sur les variables selon le type de valeurs qu’elles stockent.
+        Dans cette partie, nous allons faire un tour d’horizon des types de valeurs les plus courants que peuvent stocker nos variables en JavaScript.
+        
+        - Le type de valeurs Number
+            Le type de valeurs Number va représenter tout nombre ou chiffre, qu’il soit positif, négatif, entier ou à virgule.
+            Pour affecter une valeur de type Number à une variable, on n’utilise ni guillemet ni apostrophe.
+            Faites attention : lorsque nous codons nous utilisons toujours des notations anglo-saxonnes, ce qui signifie qu’il faut remplacer nos virgules par des points pour les nombres décimaux.
+        
+        ```js
+        var t = 10;
+        var f = 1.2;
+        var h = -6;
+        ```
+        
+        - Le type de valeurs String
+            Le type de valeurs String va représenter les chaînes de caractères, c’est-à-dire les textes.
+            Si l’on veut stocker une chaîne de caractères dans une variable, il faut entourer notre chaîne par des apostrophes ou des guillemets.
+            Ce sont justement ces apostrophes ou guillemets qui vont indiquer au JavaScript que l’on stocke une valeur de type String.
+        
+        ```js
+        var r = 'sam';
+        var d = "qwe";
+        ```
+        
+        Au niveau des apostrophes / guillemets, vous pouvez choisir les uns ou les autres selon votre préférence. Cependant, si la valeur stockée contient elle même des apostrophes ou des guillemets, il faudra les échapper au moyen d’un antislash selon ce que vous aurez choisi pour entourer la valeur comme ceci:
+        
+        ```js
+        var q = "Je vis dans le \"92\"";
+        var u = 'L\'école de ma ville';
+        ```
+        
+        Une nouvelle fois, comprenez bien que c’est le fait de mettre des guillemets ou des apostrophes qui va faire qu’une valeur va être considérée comme une valeur de type String. Ainsi, même un nombre sera considéré comme étant de type String, c’est-à-dire comme une chaîne de caractères si on l’entoure de guillemets ou d’apostrophes. Faites bien attention à cela, car ça va avoir une grande influence sur les manipulations que l’on va pouvoir faire sur telle ou telle variable !
+        
+        - Le type de valeurs Boolean
+            Une variable en JavaScript peut encore stocker une valer de type Boolean, c’est-à-dire un booléen. Un booléen, en algèbre, est une valeur binaire (soit 0, soit 1). En informatique, un booléen va être soit la valeur true (vrai), soit la valeur false (faux).
+            Ce type de valeur peut sembler plus compliqué à appréhender à première vue. Pas d’inquiétude, nous allons souvent l’utiliser par la suite car il va nous être très utile pour effectuer des tests et vérifier si une condition est vérifiée (true) ou non (false).
+            Une nouvelle fois, faites bien attention : pour qu’une variable stocke bien un booléen, il faut lui faire stocker la valeur true ou false, sans guillemets ou apostrophes.
+            Si vous rajoutez des guillemets ou des apostrophes, la variables stockera alors la chaîne de caractères true ou la chaîne de caractères false.
+        
+        - Autres valeurs stockées en JavaScript
+            Les variables en JavaScript peuvent stocker bien d’autres valeurs n'étant pas de type String, Number ou Boolean. Parmi les autres valeurs remarquables, on peut citer la valeur « null », qui correspond à la non connaissance à priori de la valeur ainsi que la valeur « undefined » qui correspond au fait de ne pas avoir défini de valeur pour notre variable. Une variable peut encore contenir la valeur « NaN » qui signifie « Not a Number » (« n’est pas un nombre » en Français).
+        
+        ```js
+        var n = null;
+        var u = undefined;
+        var nan = NaN;
+        ```
+        
+        - Changer le type d’une valeur stockée dans une variable
+            Notez que vous pouvez tout à fait affecter une nouvelle valeur d’un autre type à une variable JavaScript. La nouvelle valeur écrasera l’ancienne, tout simplement.
+        
+        ```js
+        var x = 4;
+        x = "quatre";
+        ```
+        
+        - Tester le type de valeur d’une variable
+            Pour tester le type de la valeur que contient une variable, on utilise généralement la fonction typeof(). Nous étudierons les fonctions en détail plus tard dans ce cours.
+            Attention cependant, cette fonction renvoie parfois des résultats contestables sur certaines valeurs.
+            Voyons immédiatement un exemple d’utilisation de typeof() ensemble. Pour afficher le résultat de typeof(), nous allons l’utiliser avec une instruction alert().
+            Le script ci-dessous affichera tous les résultats au sein d’une même instruction alert(). Pour faire cela, j’utilise ce qu’on appelle la concaténation (avec les « + ») et la notation \n qui sert à créer un retour à la ligne en JavaScript.
+        
+        ```js
+        var text = "Bonjour";
+        alert(typeof(text));
+        ```
+        
+        ## Des opérations mathématiques simples sur les variables
+        
+        Le grand avantage des variables est avant tout que l’on va pouvoir les manipuler et notamment effectuer des opérations entre variables. Pour des variables stockant des valeurs de type Number, on va donc pouvoir effectuer les mêmes opérations qu’avec des nombres en mathématiques. Ainsi, nous allons pouvoir additionner (les valeurs de) deux variables entre elles, les soustraire l’une à l’autre, les multiplier entre elles, etc.
+        
+        ```js
+        var x = 5, y = 10, z = -2;
+        x = x + 1;
+        x = x - 4;
+        var mult = y * x;
+        var div = y / z;
+        /*
+        Le modulo représente le reste de la division entière d'un nombre par un autre.
+        Par exemple si on divise 13 par 3 et qu'on conserve la partie entière, le résultat est 4 et il reste 1. 1 est donc le modulo.
+        */
+        var mod = 13 % 3;
+        ```
+        
+        - Priorités de calcul
+            Faites attention à respecter les priorités de calcul lorsque vous effectuez des opérations sur les variables. En réalité, c’est très simple puisque ce sont les mêmes qu’en mathématiques : les parenthèses sont prioritaires sur toute autre opération, puis viennent la multiplication, la division et le modulo et finalement l’addition et la soustraction.
+        
+        ```js
+        /*
+        Ici, on commence par calculer ce qui est entre parenthèses, c’est-à-dire 4 + z ce qui nous donne 4 + (-2) = 2.
+        Ensuite, on divise donc la valeur contenue dans y par 2 ce qui nous donne 5 et on calcule le modulo de 5 par 3 qui est égal à 2.
+        Finalement, on additionne la valeur contenue dans x et 2 pour arriver au résultat final : 7.
+        Faites donc bien attention aux priorités de calcul lorsque vous effectuez des manipulations sur les variables, car le résultat peut s’avérer totalement différent de celui attendu si vous n’en tenez pas compte.
+        */
+        var priorite = x + y / (4 + z) % 3;
+        ```
+        
+        - Opérations simplifiées sur les variables JavaScript
+            Sachez que l’on peut simplifier l’écriture de certaines opérations mathématiques sur les variables en JavaScript, afin de gagner en temps, en performance et en clarté.
+            Voici les notations simplifiées ci-dessous avec leur équivalent en « version longue »
+        
+        ```js
+        // x = x + 1
+        x += 1;
+        // x = x - 1
+        x -= 1;
+        // x = x * 1
+        x *= 1;
+        // x = x / 1
+        x /= 1;
+        // x = x % 1
+        x %= 1;
+        ```
+        
+        ## Concaténer signifie tout simplement mettre bout à bout deux chaînes de caractères afin d’en former une troisième, nouvelle.
+        
+        Concaténer, c’est donc « additionner » des chaînes de caractères. En JavaScript, on va pouvoir concaténer grâce à l’opérateur « + ». Evidemment, nous allons pouvoir appliquer cet opérateur directement à nos variables afin de concaténer leurs contenus respectifs.
+        
+        ```js
+        var prenom = "Samba", espace = ' ', age = 30;
+        // On peut contaténer et stocker le résultat dans une variable
+        var moi = prenom + espace + moi;
+        //On peut contaténer des valeurs entre elles
+        var toi = 'Nom' + ' ' + '28';
+        // On peut contaténer des valeurs et des variables
+        var music = "Jazz";
+        var hobbie = "J'aime le ' + music;
+        // On utilise également la concaténation pour tous afficher dans une même alert
+        alert(
+            "Variable moi " + moi +
+            "\nVariable toi " + toi +
+            "\nVariable hobbie " + hobbie
+        );
+        ```
+        
+        - Additionner un nombre et une chaîne de caractères
+            Si l’on tente « d’additionner » un nombre et une chaîne de caractères, tout ce qu’il y a derrière la chaîne de caractères sera également considéré comme une chaine de caractères par le JavaScript.
+        ```js
+        var x = 4 + 2 + "1";
+        var y = "1" + 2 + 4;
+        var z = 2 + "un" + 4;
+        ```
+        
+        Ici, pour notre variable x, le JavaScript va commencer par additionner 2 et 4 naturellement, puis va ajouter la chaîne de caractères « 1 » au résultat (c’est-à-dire à 6). Cela donne donc le résultat « 61 ».
+        Dans le second cas, le JavaScript va considérer tout ce qui se trouve derrière la chaîne de caractères « 1 » comme une chaîne de caractères, et va donc concaténer 1, 2 et 4 pour donner « 124 ».
+        On peut également observer plus clairement cela avec notre troisième variable z, qui va stocker « 2un4 ».
+        
+        ## Les conditions
+        
+        En JavaScript, nous allons souvent vouloir effectuer différentes actions selon la valeur d’un paramètre, afin de dynamiser notre site et d’y ajouter une certaine interaction. Par exemple, on va vouloir afficher le message « Bonjour » si il est moins de 18h ou « Bonsoir » dans le cas contraire, ou encore afficher le message « Bonjour Pierre » si votre visiteur à indiqué au préalable qu’il s’appelait Pierre. Une façon simple de faire cela est d’utiliser les conditions.
+        
+        Les conditions vont s’articuler autour d’un test. Généralement, nous allons comparer la valeur contenue dans une variable à une certaine autre valeur. Selon le résultat du test, nous allons ensuite pouvoir exécuter un bloc de code plutôt qu’un autre à l’intérieur de notre condition.
+        
+        - Les opérateurs de comparaison
+            Pour effectuer des comparaiosns à l’intérieur d’une condition, nous allons avoir besoin d’opérateurs de comparaison.
+            Ces opérateurs sont représentés par les symboles suivants:
+            == 	Est égal à (en valeur)
+            != 	Est différent de (en valeur)
+            === 	Est égal à (en valeur et en type)
+            !== 	Est différent de (en valeur ou en type)
+            < 	Est strictement inférieur à
+            <= 	Est inférieur ou égal à
+            > 	Est strictement supérieur à
+            >= 	Est supérieur ou égal à
+        
+            Commencez par noter que pour tester l’égalité, on n’utilise pas le signe « = » qui, rappelons le, est un opérateur d’affectation et non d’égalité au sens mathématique du terme, mais le double égal (==).
+            Ensuite, deux symbole peuvent vous poser problème : le triple égal et le point d’exclamation suivi de deux signes égal.
+            En utilisant seulement le double égal, nous n’allons tester que l’égalité sur la valeur. Ainsi, si l’on tente de comparer le chiffre 4 à la chaîne de caractères « 4 » de cette manière, le JavaScript renverra le booléen « true » (vrai).
+            En revanche, si l’on utilise le triple égal, on va tester à la fois l’égalité sur les valeurs et sur le type de valeurs. Ainsi, si l’on compare le chiffre 4 à la chaîne de caractère « 4 », le JavaScript renverra « false » (faux).
+        
+        - Le JavaScript et les comparaisons de valeurs
+            Afin de bien comprendre comment fonctionnent les conditions, il est indispensable au préalable que vous compreniez comment le JavaScript effectue des comparaisons entre les valeurs.
+            Sans cette connaissance, il est impossible de savoir comment une condition marche véritablement.
+            Tout d’abord, vous devez bien comprendre que le JavaScript sait comparer différentes valeurs entre elles.
+            A chaque fois que l’on va comparer deux valeurs, le JavaScript va renvoyer un booléen, c’est-à-dire soit « true », soit « false », selon que la comparaison soit vraie ou pas.
+            Par exemple, si l’on écrit en JavaScript « 7 < 14 », le JavaScript renverra « true » car 7 est bien inférieur à 14.
+            Dans nos conditions, nous n’allons donc pas directement tester si une valeur est inférieure, égale ou supérieure à une autre, mais tester si le JavaScript nous renvoie true ou false.
+            C’est une distinction très importante que malheureusement très peu de développeurs font ou comprennent.
+        
+            ```js
+            var x = 7, y = 14;
+            var vrai = x < y;
+            var faux = 14 <= 7;
+            var egalValeur = 4 == "4";
+            var egalValeurType = 4 === "4";
+            var diffValeur = 4 != "4";
+            var diffValeurType = 4 !== "4";
+            ```
+        
+            - La condition if
+        
+            « If » en anglais signifie « si ». Avec cette première structure conditionnelle, on va pouvoir tester si une valeur répond à un certain critère, et exécuter un bloc de code le cas échéant.
+        
+            ```js
+            var heure = 15;
+        
+            if(heure <= 18){
+                alert("Bonjour");
+            }
+            ```
+        
+            - La condition if…else (« si… sinon » en Français) va nous permettre d’exécuter un bloc de code si le JavaScript renvoie bien la valeur attendue, et un autre bloc de code s’il ne renvoie pas la valeur attendue.
+        
+            ```js
+            var heure = 15;
+        
+            if(heure <= 18){
+                alert("Bonjour");
+            } else {
+                alert("Bonsoir");
+            }
+            ```
+        
+            - La condition if…else if…else
+        
+            La condition if…else if…else signifie « si… sinon si… sinon » en Français.
+            Cette condition va être très puissante et très pratique puisqu’elle va nous permettre de gérer autant de cas que l’on souhaite et d’exécuter un code différent pour chaque nouveau cas créé. En effet, on va pouvoir insérer autant de else if que l’on veut au sein de notre condition pour pouvoir gérer un nombre infini de cas.
+            ```js
+            var heure = 9;
+        
+            if(heure <= 12){
+                alert("C'est le matin");
+            } else if(heure == 12) {
+                alert("C'est le midi");
+            } else if(heure <= 18) {
+                alert("C'est l'après-midi");
+            } else {
+                alert("C'est le soir");
+            }
+            ```
+        
+            - Limitations et solutions
+        
+            Cependant, ce code est encore loin d’être parfait. En effet, certains d’entre vous se demandent peut être comment le JavaScript fait pour savoir si « c’est le matin » ou « c’est l’après midi » lorsque notre variable stocke une valeur inférieure à 12 ?
+            La réponse est simple : il ne le sait pas. Le code JavaScript va simplement être lu de façon linéaire et dès qu’un test va être évalué à true, nous allons sortir de la condition.
+            Dans l’exemple précédent, par exemple, notre variable heure stocke le chiffre 9. A priori, le JavaScript va donc renvoyer true pour « heure < 12 » et pour « heure <= 18 ».
+            Comme le code est lu linéairement, le premier cas rencontré revoyant true va être « heure < 12 ». Le JavaScript va donc renvoyer « c’est le matin ».
+            Cependant, si nous avions construit notre condition différemment, le JavaScript aurait renvoyé le « mauvais » message.
+        
+            ```js
+            var heure = 9;
+        
+            if(heure <= 18){
+                alert("C'est l'après-midi");
+            } else if(heure == 12) {
+                alert("C'est le midi");
+            } else if(heure <= 12) {
+                alert("C'est le matin");
+            } else {
+                alert("C'est le soir");
+            }
+            ```
+        
+            Second gros problème de cette condition : nous ne prenons pas en charge les valeurs aberrantes. Dans le cas de l’heure, cela peut sembler superflu, mais imaginez que vous demandiez à vos visiteurs de rentrer l’heure qu’ils souhaitent. Dans notre cas, nous pourrions déjà utiliser deux structures conditionnelles if pour filtrer le type de données reçues.
+        
+            ```js
+            var heure = 9;
+            if(typeof(heure) == "number"){
+                if(heure <= 18){
+                    alert("C'est l'après-midi");
+                } else if(heure == 12) {
+                    alert("C'est le midi");
+                } else if(heure <= 12) {
+                    alert("C'est le matin");
+                } else {
+                    alert("C'est le soir");
+                }
+            } else {
+                alert("Mauvaise valeur");
+            }
+            ```
+            Ici, on utilise typeof() pour tester le type de la valeur contenue dans notre variable heure dans un premier if. Ensuite, on compare la valeur renvoyée par notre fonction à la valeur "number" et si le JavaScript renvoie true suite à cette comparaison, on exécute le code contenu dans ce premier if. Si typeof() renvoie bien la valeur number, on rentre donc dans notre premier if et de nouveaux tests sont effectués au sein de ce if. Sinon, on arrive dans le dernier else et on affiche « mauvaise valeur ».
+        
+        ## Les opérateurs logiques
+        
+        En JavaScript, il existe trois opérateurs logiques très utilisés : l’opérateur logique « ET », l’opérateur logique « OU » et l’opérateur logique « CONTRAIRE » ou « NON ». Chacun de ces opérateurs est représenté par un symbole.
+        
+            ET (AND) 	&&
+            OU (OR) 	||
+            NON 	!
+        
+            - Opérateurs logiques et conditions
+        
+            Nous allons pouvoir utiliser ces opérateurs logiques au sein même de nos conditions, afin de pouvoir par exemple effectuer plusieurs comparaisons au sein d’un même test.
+            Plus précisément, l’opérateur logique « ET » va nous permettre de créer un intervalle de comparaison pour une variable.
+            On va par exemple pouvoir tester si la valeur contenue dans une variable heure est comprise entre 0 et 12.
+            Grâce à cet opérateur, nous allons pouvoir lever l’ambiguïté sur certaines valeurs (ambiguïté vue dans la partie précédente) en ne travaillant plus qu’avec des intervalles.
+        
+            ```js
+            var heure = 9;
+        
+            if(heure >= 0 && heure <= 12){
+                alert("C'est le matin");
+            } else if(heure === 12) {
+                alert("C'est le midi");
+            } else if(heure > 12 && heure <= 24) {
+                alert("C'est le soir");
+            } else {
+                alert("Valeur invalide");
+            }
+            ```
+        
+            L’opérateur « OU » va nous permettre de comparer la valeur d’une variable à deux valeurs différentes. Si l’une des deux comparaisons affiche le résultat attendu, le reste du code sera exécuté. On peut par exemple tester si la valeur contenue dans une variable heure est inférieure à 0 ou supérieure à 24.
+        
+            ```js
+            var heure = 9;
+        
+            if(heure < 0 || heure > 24){
+                alert("Valeur invalide");
+            } else {
+                alert("Valeur valide");
+            }
+            ```
+        
+            Finalement, l’opérateur logique « NON » va nous permettre de nier une comparaison. Ainsi, des comparaisons évaluées de base à false vont être évaluées à true et inversement. Dans l'exemple ci-dessus, le deuxième jeu de parenthèses n'est pas strictement nécessaire. Je les ai rajoutées afin de bien comprendre sur quoi porte l'opérateur « NON ».
+        
+            ```js
+            var heure = 9;
+        
+            if(!(heure <= 7)){
+                alert("Il est plus de 7");
+            } else {
+                alert("Il est moins de 7");
+            }
+            ```
+        
+            - L’évaluation des valeurs
+        
+            Il y a un autre point que vous devez connaître afin de véritablement comprendre les conditions : une valeur peut être évaluée à true ou false même sans opérateur de comparaison. Ainsi, toute valeur différente de null, undefined, NaN, 0 et la chaîne de caractères vide sera évaluée par défaut par le JavaScript à true. Savoir cela nous permet de comprendre bien des choses et de résoudre certaines situations en JavaScript.
+        
+            ```js
+            var x = 6, y = '';
+            if(x){
+                alert("x est évalué a true par javascript");
+            }
+            if(y){
+                alert("y est évalué a true par javascript");
+            } eles {
+                alert("y est évalué a false par javascript");
+            }
+            ```
+        
+        ## Le switch
+        
+        Parfois, dans vos conditions, vous voudrez pouvoir dissocier de nombreux cas afin de traiter chacun d’entre eux différemment. Par exemple, on peut imaginer renvoyer un message différent à des élèves selon la note obtenue par ceux-ci à un test. Pour faire cela, on peut bien évidemment toujours utiliser un if… else if… else. Cependant, il va parfois être plus judicieux d’utiliser une instruction switch. Le switch est semblable à une condition dans laquelle on va pouvoir générer autant d’issues que l’on souhaite. Attention cependant à une limitation importante du switch : cette instruction ne peut tester que l’égalité de valeurs et non pas l’inégalité.
+        
+        ```js
+        var heure = 10;
+        switch(heure){
+            case 8:
+                alert("Il est 8H");
+                break;
+            case 9:
+                alert("Il est 9");
+                break;
+            case 10:
+                alert("Il est 10H");
+                break;
+            case 11:
+                alert("Il est 11H");
+                break;
+            case 12 :
+                alert("Il est 12H");
+                break;
+            default :
+                alert("Error! !!");
+        }
+        ```
+        
+        ## Les boucles
+
+</body>
+</html>

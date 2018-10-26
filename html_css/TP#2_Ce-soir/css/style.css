@@ -1,0 +1,89 @@
+.container{
+    width: 1000px;;
+    margin: auto;
+}
+
+.hr1, .hr2, .hr3, .hr4, .hr5{
+    width: 50px;
+    height: 8px;
+    background-color: red;
+}
+.hr1, .hr5{
+    margin: 20px 15px 80px;
+}
+
+.clear{
+    clear:both;
+}
+
+.wodd{
+    width: 100%;
+    height:450px;
+    background-image: url("../julie_buisson/img/woddPlank.jpg")
+}
+
+#triangle{
+    width:1px;
+	height:1px;
+	border:1px solid red;
+	border-color: red red transparent transparent;
+    border-width:100px;
+    z-index: 1;
+}
+
+.titre, .nav{
+    font-family: 'Caveat Brush', cursive; 
+}
+.titre{
+    margin:0 15px 20px;
+}
+
+.nav{
+    text-decoration:none;
+    color:black;
+}
+
+.first, .second, .third{
+    text-align: center;
+}
+
+.img1, .img3{
+    float:right;
+    width:60%;
+}
+.img1{
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+.img2{
+    float:left;
+    width:65%;
+}
+.img4, .pattern{
+    width: 1000px;
+}
+
+.red{
+    color:red;
+}
+
+.texte{
+    margin:24px;
+
+}
+
+.grains{
+    width:160px;
+    height:auto;
+}
+
+.pattern{
+    position: absolute;
+    bottom: fixed;
+    height:300px;
+    background-image: url("../julie_buisson/img/pattern.jpg");
+}

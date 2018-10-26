@@ -1,0 +1,121 @@
+body{   font-size: 25px;/*taille de police: 25 pixels*/
+
+}
+
+h1{
+
+  background-color: darkslategray;
+
+  color: white;
+
+}
+
+section p{
+
+  color: red;/*tous les <p> à l'intérieur de la balise <section>*/
+
+}
+
+section p:first-child{
+
+  color: darkblue;/*premier <p>*/
+
+}
+
+section p:last-child{
+
+  color: lightgreen;/*dernier <p>*/
+
+}
+
+section p:nth-child(even){
+
+  color: lightblue;/*les <p> pairs*/
+
+}
+
+section p:nth-child(odd){
+
+  color: brown;/*les <p> impairs*/
+
+}
+
+section p:nth-child(3), section p:nth-child(10){
+
+  color: orange;/*les <p> 3 et 10*/
+
+}.zone1{/**CLASS donc avant son nom je mets un .*/
+
+  color: #dc143c
+
+;
+
+  background: black;
+
+  height:30px;
+
+}
+
+.zone2{
+
+ background:yellow;
+
+  color: #008080
+
+;
+
+  height: 55px;
+
+}
+
+.lime{
+
+ background: black;
+
+  color: #00ff00
+
+;
+
+  font-size: 65px;
+
+  border-radius: 35px;}
+
+#zone3{/**ID donc avant son nom je mets un #*/
+
+  background-color: /*#f5deb3*/purple;
+
+  height: 30px;
+
+  color: white;
+
+}
+
+#zone3:after{/*rajouter contenu après l'ID zone3*/
+
+  content: " rajouté après";
+
+}
+
+#zone3:before{/*rajouter contenu avant l'ID zone3*/
+
+  content: "rajouté avant ";
+
+  background-color: cyan;
+
+}
+
+li:nth-child(2){
+
+  background-color: darkred;
+
+  color: white;
+
+}
+
+p{
+
+ background: lightgray;
+
+border: 3px blue double;
+
+}

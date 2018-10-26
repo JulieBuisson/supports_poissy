@@ -1,0 +1,68 @@
+*{
+    text-align: center;
+}
+
+@face-font{
+    font-family:'Indie Flower', cursive;
+}
+
+.poeme{
+    text-align: left;
+    color: darkcyan;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.all{
+    width: 600px;
+    margin: auto;
+    background: white;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.bouton{
+    background: cornflowerblue;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration:none;
+    color: white;
+}
+
+.p{
+    text-align: left; 
+}
+
+#mouvement{
+    color:  cornflowerblue;
+    font-size: 200%;
+}
+
+.titre{
+    color: cornflowerblue;
+    font-size: 180%;
+}
+
+.titre2{
+    color: cornflowerblue;
+    font-size: 120%;
+}
+
+.sep{
+    color:cornflowerblue;
+    padding: 1px;
+    background-color: cornflowerblue;
+}
+
+#fin{
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.footer{
+    background-color: cornflowerblue;
+    padding: 5px;
+}

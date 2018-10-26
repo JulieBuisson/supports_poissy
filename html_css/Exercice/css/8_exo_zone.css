@@ -1,0 +1,15 @@
+header{
+    height: 100px;
+    background-color: pink;
+}
+
+footer{
+    background-color: pink;
+    position: absolute;
+    height: 100px;
+    width: 100%
+}
+
+.conteneur{
+    position: relative;
+}

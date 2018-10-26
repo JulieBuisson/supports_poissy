@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>La Boucle while</h1>
+     <p> La Boucle while va nous permettre de répéter une serie d'action tant qu'une condition est vraie.</p>
+
+    <script>
+
+        var x = 0;
+        while(x < 10){
+            alert("x contient la valeur" + x);
+            x++; // Equivaut à x = x + 1  - Incrémentation
+            // x--; Equivaut à x = x - 1  - Décrémentation
+        }
+
+    </script>   
+    
+    <h1>La Boucle do..while</h1>
+
+    <script>
+        var x = 100;
+        do{
+            alert("x contient la valeur" + x);
+        } while(x < 10)
+    </script>
+
+    <h1>La Boucle for</h1>
+    <p>Elle nous permet de répéter une série d'instruction à partir d'une valeur donnée jusqu'à une certaine valeur seuil.</p>
+
+    <script>
+        for(i = 0; i < 10; i++){
+            alert("i contient la valeur " + i);
+        }
+    </script>
+
+    <h1>La fonction</h1>
+    <p>C'est un bloc de code qui va éxécuter une tâche précise.</p>
+
+    <script>
+        function multiplication(/*arguments*/x, y){
+            // Le code de la tâche à réaliser
+            // alert(x * y); ->Renvoi l'information
+            return x * y; // ->Stock l'information
+        }
+       var resultat = multiplication(5, 10);
+       resultat += 2;
+       alert(resultat);
+    </script>
+
+    <!--Exercice -- Ecrire une fonction simple qui au clique de la souris sur un bouton lance la fonction. Cette fonction demande la saisie d'une largeur, d'une longueur et affiche la surface du rectangle correspondant.
+    <p><button onclick="nomdelafonction()">Lancer la fonction</button></p>-->
+
+    <button onclick="rectangle(prompt('largeur'), prompt('longueur'))">Lancer la fonction</button>
+    <script>
+        function rectangle(la, lo) {
+            alert(la * lo);
+        }
+    </script>
+
+    <!-- 1. Créez une fonction qui demande la saisie d'un rayon, retourne la surface du cercle de ce rayon.
+     2. Affichez le résultat de l'appel à cette fonction en cliquant sur le bouton. -->
+
+    <button onclick="cercle(prompt('Entrez la valeur du rayon'))">Surface du cercle</button>
+    <script>
+        function cercle(rayon) {
+            alert(3.14 * rayon * rayon)
+        }
+    </script>
+
+    <!-- 1. Créez deux variables globales a et b, initialisées respectivement à 3 et à 2.
+     2. Créez une fonction multiplie prenant un argument x prenant comme valeur par défaut 8, et renvoyant le résultat de la multiplication de x par 3
+     3. Créez une fonction affiche, appelée au clic sur le bouton, qui affiche dans des boîtes d'alerte successivement le résultat de multiplie appliquée a, à b, puis sans aucun paramètre (en exécutant donc la fonction avec la valeur de x par défaut) -->
+
+    <script>
+        var a = 3, b = 2;
+        function multiplie(x = 8) {
+            return x * a;
+        }
+
+        function affiche() {
+            alert(multiplie() * a);
+            alert(multiplie() * b);
+            alert(multiplie());
+        }
+    </script>
+    <button onclick="affiche()">Affiche</button>
+
+
+    <!-- 1. Au click sur le premier bouton, lancez la fonction boucle() qui crée un tableau de 3 éléments et utilise une boucle for pour le remplir de sorte que l'élément i du tableau contienne i².
+    2.Au click sur le second bouton, lancez la fonction boucle2() qui demande à l'utilisateur via un prompt de saisir la longueur souhaitée du tableau, puis crée ce tableau et utilise une boucle for pour le remplir de sorte que l'élément i du tableau contienne i². Affichez le tableau dans une boîte d'alerte.
+    Au click sur le bouton, lancer la fonction jourDeLaSemaine(). Cette fonction détermine le jour de la semaine et affiche selon le cas dimanche, lundi, mardi... etc. jusqu'à samedi. -->
+
+    <button onclick="boucle()">1er bouton</button>
+    <script>
+        function boucle() {
+            var tableau = new Array(3);
+            for (ok = 0; ok < 3; ok++) {
+                tableau[ok] = ok * ok;
+            }
+            alert(tableau);
+        }
+    </script>
+
+    <button onclick="boucle2(prompt('Saisir le nombre souhaité'))">2eme bouton</button>
+    <script>
+        function boucle2(longueur) {
+            var tableau = new Array(longueur);
+            for (bla = 0; bla <= longueur; bla++) {
+                tableau[bla] = bla * bla
+            }
+            alert(tableau);
+        }
+    </script>
+
+    <button onclick="jourdelasemaine()">Date complète</button>
+    <script>
+        function jourdelasemaine() {
+            var date = new Date();
+            alert(date)
+        }
+    </script>
+
+    <script>
+        function jourDeLaSemaine() {
+            var date = new Date();
+            var j = date.getDay();
+            switch (j) {
+                case 0:
+                    alert("Dimanche");
+                    break;
+                case 1:
+                    alert("Lundi");
+                    break;
+                case 2:
+                    alert("Mardi");
+                    break;
+                case 3:
+                    alert("Mercredi");
+                    break;
+                case 4:
+                    alert("Jeudi");
+                    break;
+                case 5:
+                    alert("Vendredi");
+                    break;
+                case 6:
+                    alert("Samedi");
+                    break;
+            }
+        } </script>
+    <button onclick="jourDeLaSemaine(/*prompt('jourDeLaSemaine')*/)">Jour De La Semaine</button>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+body{
+    font-family: 'Cormorant Garamond', serif;
+    background: #f6f6f7;
+}
+
+header, footer{
+    text-align: center;
+    font-size: 15px;
+}
+
+.container{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.pos{
+    width: 900px;
+    margin: auto;
+}
+
+.text1{
+    text-align: right;
+}
+
+.hr{
+    width: 500px;
+    margin: -1em auto;
+}
+
+.ligne1{
+    color: #cf884d;
+    font-size: 8px;
+}
+
+.titre{
+    letter-spacing: 5px;
+}
+
+.ligne2{
+    text-decoration: none;
+    color: black;
+}
+
+.img1{
+    float: left;
+    width: 35%;
+    height: auto;
+}
+
+.img2{
+    float: right;
+    width: 50%;
+    height: auto;
+    padding-left: 30px;
+}
+
+.img3{
+    float: left;
+    width: 50%;
+    height: auto;
+    padding-right: 30px;
+}
+
+.img4{
+    float: right;
+    width: 50%;
+    height: auto;
+    padding-left: 30px;
+}
+
+.img5{
+    float: left;
+    width: 50%;
+    height: auto;
+    padding-right: 30px;
+}
+
+.clear{
+    clear:both;
+}
+
+.a{
+    width: 450px;
+    margin: -0.7em;
+}
+
+.b{
+    width: 450px;
+    margin: -0.7em;
+}
+
+.note{
+    background-color: #495057;
+    color: white;
+    width: 300px;
+    height: 30px;
+}
+
+.last{
+    font-size: 20px;
+}

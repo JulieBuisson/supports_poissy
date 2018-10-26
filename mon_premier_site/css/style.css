@@ -1,0 +1,667 @@
+*{
+
+    box-sizing: border-box;  /*ça bloque l'élement, le recentre et ça fait une marge*/
+
+}
+
+html, body, div, span, applet, object, iframe,
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+
+a, abbr, acronym, address, big, cite, code,
+
+del, dfn, em, img, ins, kbd, q, s, samp,
+
+small, strike, strong, sub, sup, tt, var,
+
+b, u, i, center,
+
+dl, dt, dd, ol, ul, li,
+
+fieldset, form, label, legend,
+
+table, caption, tbody, tfoot, thead, tr, th, td,
+
+article, aside, canvas, details, embed,
+
+figure, figcaption, footer, header, hgroup,
+
+menu, nav, output, ruby, section, summary,
+
+time, mark, audio, video {
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+h1{
+   font-size: 70px;
+   color: white;
+   margin-top: 50px;
+   text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 400;
+    float: left;
+}
+
+h2{
+   font-size: 50px;
+   color: CRIMSON;
+   padding: 20px;
+   font-weight: bold;
+    font-family: 'Amatic SC', cursive;
+}
+
+h3{
+   font-size: 22px;
+   color: #2c3e50;
+   padding: 15px;
+}
+
+h4{
+    text-align: center;
+    margin-top: 30px;
+    color: #2c3e50;
+    font-size: 20px;
+}
+
+h5{
+   font-size: 85px;
+   color: /*CRIMSON*/purple;
+   padding: 20px;
+   font-weight: bold;
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+}
+
+blockquote{
+   font-style: italic;
+   font-size: 120%;
+}
+
+strong{
+   font-weight: bold;
+}
+
+main{
+    background: papayawhip;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+aside{
+   /*height: 250px;*/
+   height: 300px;
+}
+
+section{
+   margin-top: 50px;
+   /*background: THISTLE;*/
+   padding: 20px;
+}
+
+footer{
+   background:MISTYROSE;
+   height: 30px;
+}
+
+/*********************************  DEBUT HEADER  ***********************************/
+
+header{
+   background-color:SLATEGRAY;
+   height: 290px;
+}
+
+#logo{
+ width: 25%;
+ text-align: center;
+ padding: 15px;
+ float: left;
+}
+
+#rs{
+ width: 5%;
+ float: right;
+ padding: 20px;
+}
+
+#rs a{
+font-size: 30px;
+color: white;
+display: block;/*change leur type inline en block pour les mettre les uns en dessous des autres*/
+text-align: center;
+padding: 15px 30px 0 0;
+text-decoration: none;
+}
+
+#rs a:hover{
+ font-size: 60px;
+ transition: 1s;
+}
+
+/**********************FIN DE HEADER*******************/
+
+/*********************DEBUT DE NAV*********************/
+
+nav{
+ background-color: MISTYROSE;
+ border-bottom: 4px solid slategray;
+ text-align: center;
+ padding: 17px;
+ clear: both;
+}
+
+nav a{
+ font-family: 'Amatic SC' cursive;
+ font-size: 25px;
+ text-decoration: none;
+ color: black;
+ font-weight: 500;
+ border: 1px solid pink;
+ padding: 6px 9px;
+ border-radius: 7px;
+ margin: 0px 8px;
+}
+
+nav a:hover{
+ background: pink;
+ transition: 1s;
+}
+
+.activ{
+ background: pink;
+}
+
+/********************FIN DE NAV**********************/
+
+/********************DEBUT DE TEXTE*****************/
+
+.roboto p{
+    font-family: 'Niramit', sans-serif; ;
+}
+
+/********************DEBUT DE SELECTEURS*****************/
+
+.select p{
+    color : red;
+}
+
+.select p:first-of-type{
+    color: purple;
+}
+
+.select p:last-of-type{
+    color: purple;
+}
+
+.select p:nth-of-type(5),.select p:nth-of-type(6){
+    color: black;
+}
+
+.select .zoneB .couleurbleu{
+    color: blue;
+}
+
+.select #zoned span{ /*le span prendra en compte aussi .couleurbleu sauf pour la couleur car on l'aura déjà définie */
+    color: deepskyblue;
+}
+
+.select .zoneA{
+    color: #963;
+}
+
+.select .zoneB{
+    color: #f56;
+}
+
+.select #zonec{
+    color: green;
+}
+
+/********************FIN DE SELECTEURS*****************/
+
+
+/******************** DEBUT PAGE IMAGES*****************/
+
+.imageFond{
+    background: #000 url("../img/fond.jpg") no-repeat;
+    background-size: cover;
+}
+
+.imageFond p{
+    width: 75%;
+    margin: 100px auto 200px auto; /*auto permet de centrer*/
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    font-size: 120%;
+    border-radius: 10px;
+}
+
+/******************** La tour Eiffel *****************/
+
+.tourEiffel img{
+    border: 5px solid black;
+    width: 250px;
+    box-shadow: 5px 5px 15px #555;
+    margin: auto;
+    display: block;
+}
+
+/******************** Rotation *****************/
+
+.francisco img {
+	border: 5px solid #fff;
+	box-shadow: 0 0 10px;
+	margin: 20px;
+	transition: .4s;
+}
+
+.francisco p img:first-of-type:hover {
+	transform: rotateZ(-20deg);
+    transition: .4s;
+}
+
+.francisco p img:last-of-type:hover {
+    transform: rotateZ(20deg);
+    transition: .4s;
+}
+
+.francisco .lstimg{
+	display: block;
+	margin: auto;
+}
+
+.francisco .lstimg:hover {
+	transform: rotateZ(-360deg);
+    transition: 1s;
+}
+
+/**************FIN DE PAGE IMAGES****************/
+
+/**************DEBUT PAGE POSITIONS****************/
+
+.centre{
+    margin: 0 auto;
+    width: 500px;
+    background: #3cc;
+    color: white;
+    text-align: center;
+    line-height: 180px;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.relative{
+    background: red;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    bottom: 50px;
+    margin: 0 auto;
+}
+
+.relative div{
+    position: absolute;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background: blue;
+}
+
+button{
+    position: fixed;
+    background: transparent;
+    right: 20px;
+    cursor: pointer;
+    font-size: 350%;
+    color: slategray;
+    border: none;
+    bottom: 40px;
+}
+
+button:hover{
+    color: pink;
+    transition: 1s;
+}
+
+.trente{
+    width: 30%;
+    padding: 20px;
+    font-size: 22px;
+    background: #f1684e;
+    color: #efe94b;
+    font-weight: bold;
+}
+
+.cinquante{
+    width: 50%;
+    padding: 20px;
+    font-size: 22px;
+    background: #383746;
+    color: #efe94b;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.cent{
+    width: 100%;
+    padding: 20px;
+    font-size: 22px;
+    background: #3cc;
+    color: #efe94b;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.carre{
+    width: 170px;
+    height: 170px;
+    background: rosybrown;
+    border: 3px solid #3cc;
+    margin: 10px;
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    line-height: 150px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+}
+
+.carre:hover{
+    background: #DC143C;
+    border: 15px solid lightseagreen;
+    transition: 1s;
+    transform: rotate(45deg);
+    border-radius: 85px;
+}
+
+.float2{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.rect{
+    height: 40px;
+    background: darkseagreen;
+}
+
+.c1, .c2, .c3, .c4{
+    width: 25%;
+    height: 250px;
+    float: left;
+}
+
+.c1{
+    background: lightpink;
+}
+
+.c2{
+    background: lightcoral;
+}
+
+.c3{
+    background: lightgreen;
+}
+
+.c4{
+    background: lightcyan;
+}
+
+.clear{
+    clear: both;
+}
+
+/*le flex: méthodes et techniques qui permettent de placer des éléments. Les parents ont leur met un display : flex et placent ses enfants*/
+
+.flex{
+    display: flex;
+    /*justify-content: space-around;*//*les éléments s'affichent avec un espace égal autour d'eux même.*/
+    justify-content: space-around; /*les éléments s'affichent avec un espace entre eux.*/
+    flex-direction: row; /*Les éléments s'inversent sur la rangée. */
+}
+
+.flex div{
+    width: 150px;
+    height: 150px;
+    background: indianred;
+    border: 3px solid;
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+}
+
+/*****************FIN PAGE POSITIONS************************/
+
+/*****************DEBUT PAGE ZONING************************/
+
+.zone1{
+    width: 100%;
+    height: 700px;
+    border: 3px solid lightseagreen;
+}
+.zonehaut{
+    width: 100%;
+    height: 30%;
+    background-color: lightpink;
+}
+
+.zonegauche{
+    width: 40%;
+    height: 70%;
+    background-color: lightblue;
+    float: left;
+}
+
+.zonedroite{
+    width: 60%;
+    height: 70%;
+    background-color: lightgreen;
+    float: right; 
+}
+ /************/
+
+.zone2{
+    width: 100%;
+    height: 700px;
+    border: 3px solid lightseagreen;
+}
+
+.zhaut{
+    width: 100%;
+    height: 30%;
+    background-color: lightpink;
+}
+
+.zgauche{
+    width: 20%;
+    height: 70%;
+    background-color: lightblue;
+    float: left;
+}
+
+.zmilieu{
+    width: 60%;
+    height: 70%;
+    background-color: lightgreen;
+    display: inline-block;
+    text-align: center;
+}
+
+.zdroite{
+    width: 20%;
+    height: 70%;
+    background-color: lightblue;
+    float: right;
+    text-align: right; 
+}
+ /***************/
+
+.zone3{
+    width: 100%;
+    height: 700px;
+    border: 3px solid lightseagreen;
+}
+
+.zg{
+    width: 50%;
+    height: 70%;
+    background-color: lightblue;
+    float: left;
+}
+
+.zd{
+    width: 50%;
+    height: 70%;
+    background-color: lightgreen;
+    float: right;
+}
+
+.zbas{
+    width: 100%;
+    height: 30%;
+    background-color: lightpink;
+}
+
+.clear{
+    clear: both;
+}
+
+/********************/
+
+.zone4{
+    width: 100%;
+    height: 900px;
+    border: 3px solid lightseagreen
+}
+
+.zoneh{
+    width: 100%;
+    height: 15%;
+    background-color: lightskyblue;
+    text-align: center;
+}
+
+.menu{
+    width: 100%;
+    height: 10%;
+    background-color: lightpink;
+    text-align: center;
+    border-bottom: 5px solid lightskyblue;
+}
+
+.zm{
+    width: 100%;
+    height: 65%;
+    background-color: white;
+    padding-top: 5%;
+}
+
+.milieu{
+    width: 90%;
+    height: 90%;
+    background-color: lightgreen;
+    margin: auto;
+    text-align: center;
+}
+
+.zb{
+    width: 100%;
+    height: 10%;
+    background-color: lightpink;
+    text-align: center;
+}
+
+/****************/
+
+.zone5{
+    width: 100%;
+    height: 1000px;
+    border: 3px solid lightseagreen
+}
+
+.zh{
+    width: 100%;
+    height: 15%;
+    background-color: lightskyblue;
+    text-align: center;
+}
+
+.menu2{
+    width: 100%;
+    height: 10%;
+    background-color: lightpink;
+    text-align: center;
+}
+
+.zm2{
+    width: 100%;
+    height: 65%;
+    background-color: white;
+    padding-top: 6%;
+}
+
+.middle{
+    background-image: url(../img/fond.jpg);
+    width: 90%;
+    height: 90%;
+    margin: auto;
+}
+
+.img1, .img2, .img3, .img4{
+    width: 50%;
+    height: 50%;
+}
+
+.img1{
+    float: left;
+    text-align: center;
+}
+
+.img1:hover{
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
+.img2{
+    background-color: greenyellow;
+    float: right;
+    text-align: center;
+}
+
+.img2:hover{
+    transition: 1s;
+    transform: rotate(360deg);
+}
+
+.img3{
+    background-color: blueviolet;
+    float: left;
+    text-align: center;
+}
+
+.img3:hover{
+    transition: 1s;
+    transform: rotate(360deg);
+}
+
+.img4{
+    background-color: #f56;
+    float: right;
+    text-align: center;
+}
+
+.img4:hover{
+    transition: 1s;
+    transform: rotate(360deg);
+}
+
+.zb2{
+    width: 100%;
+    height: 10%;
+    background-color: lightpink;
+    text-align: center;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Base CDN (Content Delivery Network)</title>
+
+    <!-- CSS de bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+
+    <!-- CSS perso TOUJOURS EN DERNIER-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- contenu html-->
+    <!-- contenu html-->
+
+        <!-- Avant la fermeture de <body> après tout le code -->
+    <!-- Ordre à respecter:
+        1-jquery
+        2-popper
+        3-bootstrap
+        parce que bootstrap a besoin de 2 bibliothèques pour fonctionner -->    
+
+
+
+</head>
+<body>
+
+<!-- 
+.col- (très petits appareils - largeur d'écran inférieure à 576 pixels)
+
+.col-sm- (petits appareils - largeur d’écran égale ou supérieure à 576 pixels)
+
+.col-md- (appareils de taille moyenne - largeur d’écran égale ou supérieure à 768 px)
+
+.col-lg- (appareils de grande taille - largeur d’écran égale ou supérieure à 992 pixels)
+
+.col-xl- (xlarge devices - largeur d'écran égale ou supérieure à 1200px)
+
+Par défaut .col prend toute la largeur de la page (12colonnes).
+
+Deux "col" éléments = 50% de la largeur de chaque col. Trois colonnes = 33,33% largeur à chaque colonne. Quatre colonnes = 25% largeur, etc. Vous pouvez également utiliser .col-sm|md|lg|xl pour rendre les colonnes réactives.
+-->
+
+<div class="row justify-content-between">
+    <div class="page-header col-6">
+        <h1>Formation Les PoleS <small>Poissy</small></h1>
+    </div>
+    <div class="dropdown col-3">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Bienvenue
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">S'inscrire</a></li>
+              <li><a href="#">Se connecter</a></li>
+              <li><a href="#">Espace Formateurs</a></li>
+              <li role="separator" class="divider"></li>
+            </ul>
+    </div>
+</div>    
+    <br>
+    <div class="jumbotron">
+            <h1>Salut !</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem libero minima dicta sed, ad vero, iste asperiores tenetur quasi fugiat autem nulla soluta voluptatum nesciunt facilis! Ut eos molestias dolores!</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">En savoir plus</a></p>
+    </div>
+<div class="row">   
+    <div class="list-group col-2">
+            <a href="#" class="list-group-item list-group-item-success">La formation</a>
+            <a href="#" class="list-group-item list-group-item-info">Les cours</a>
+            <a href="#" class="list-group-item list-group-item-warning">Les exercices</a>
+            <a href="#" class="list-group-item list-group-item-danger">Fab Lab</a>
+    </div>  
+    <div class="embed-responsive embed-responsive-4by3 col-6">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=ddFuJfcTKbs"></iframe>
+    </div>
+</div>     
+
+
+
+
+
+
+
+
+
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+/**Commentaire css */
+
+*{
+
+    text-align: center;
+  
+  }
+  
+  body{
+  
+    background: #f5deb3;/**code hexadecimal*/
+  
+  }
+  
+  header{
+  
+    background-color: #900c3f;
+  
+    color: #fff;
+  
+    height: 100px;/**hauteur*/
+  
+  }
+  
+  /**background color sert à définir uniquement la couleur de fond de l'élément.
+  
+  Backgroud sert lui à définir l'ensemble des propriétés de fond de l'élément.*/
+  
+  
+  
+  nav{
+  
+  background-color: : #daf7a6;
+  
+  height: 60px;
+  
+  }
+  
+  
+  
+  section{
+  
+    background: navy;
+  
+    height: 550px;
+  
+  }
+  
+  article{
+  
+    background-color: #ff5733;
+  
+    height: 66px;
+  
+  }
+  
+  footer{
+  
+    background-color: #daf7a6;
+  
+    height: 75px;
+  
+  }
+  
+  nav, footer{
+  
+    color: #a93226,
+  
+  }
+  
+  /**je cible une class avec une dièse devant*/
+  
+  .jaune{
+  
+    background-color: yellow;
+  
+  }
+  
+  /**je cible un id avec un point devant*/
+  
+  #noir{
+  
+    background-color: black;
+  
+    color: #fff;
+  
+    text-align: justify;
+  
+    font-size: 35px /**taille de la police*/
+  
+  }
