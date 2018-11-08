@@ -31,7 +31,7 @@
     </header>
 
     <nav>
-        <a href="index.html" class="activ">Stucture</a>
+        <a href="index.html">Stucture</a>
         <a href="texte.html">Textes</a>
         <a href="selecteurs.html">Selecteurs</a>
         <a href="images.html">Images</a>
@@ -40,14 +40,62 @@
         <a href="listes.html">Listes</a>
         <a href="lien_menu.html">Liens & menus</a>
         <a href="tableau.html">Tableaux</a>
-        <a href="formulaire.html">Formulaires</a>
+        <a href="formulaire.html" class="activ">Formulaires</a>
         <a href="multimedias.html">Multimédias</a>
         <a href="animation.html">Animations</a>
         <a href="fancy_box.html">Fancy box</a>
     </nav>
 
     <main>
-        
+
+        <h2>Formulaire</h2>
+
+        <div class="formulaire">
+            <form>
+
+                <label for="pseudo">Pseudo*</label>
+                <input type="text" id="pseudo" name="pseudo" required>
+                <br>
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+                <br>
+                <label for="{:mdp}">Mot de passe</label>
+                <input type="password" id="mdp" name="mdp" required>
+                <br>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <p>
+                    <label for="file">CV</label>
+                    <input type="file" id="cv" name="cv">
+                    Aucun fichier choisi
+                </p>
+                <br>
+                <p>Quels sont vos fruits préférés ?</p>
+                <br>
+                <p>
+                    <input type="checkbox" name="orange">Orange
+                    <input type="checkbox" name="fraiser" checked>Fraise
+                    <input type="checkbox" name="mangue">Mangue
+                </p>
+                <br>
+                <label for="codepostal">Code postal</label>
+                <input type="text" id="codepostal" name="codepostal" maxlength="5" required>
+                <br>
+                <br>
+                <textarea name="commentaire" rows="8" cols="30"></textarea><br>
+                <br>
+                <p>Message</p>
+                <br>
+                <input type="submit" name="envoyer" value="Envoyer">
+                <input type="reset" name="annuler" value="Annuler">
+
+            </form>
+        </div>
+        <br>
+        <br>
+        <br>
+
     </main>
 
     <a href="#logo"><button type="button"><i class="fa fa-arrow-circle-up fa-2x" aria-hidden="true"></i></button></a>

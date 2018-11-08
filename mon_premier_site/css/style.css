@@ -1,6 +1,7 @@
 *{
 
-    box-sizing: border-box;  /*ça bloque l'élement, le recentre et ça fait une marge*/
+    box-sizing: border-box;  /*ça bloque l'élement, le recentre 
+    et ça fait une marge*/
 
 }
 
@@ -635,6 +636,8 @@ button:hover{
 .img2:hover{
     transition: 1s;
     transform: rotate(360deg);
+    border-radius: 150px;
+    opacity: 0.1;
 }
 
 .img3{
@@ -646,6 +649,8 @@ button:hover{
 .img3:hover{
     transition: 1s;
     transform: rotate(360deg);
+    border-radius: 150px;
+    opacity: 0.1;
 }
 
 .img4{
@@ -657,6 +662,8 @@ button:hover{
 .img4:hover{
     transition: 1s;
     transform: rotate(360deg);
+    border-radius: 150px;
+    opacity: 0.1;
 }
 
 .zb2{
@@ -664,4 +671,371 @@ button:hover{
     height: 10%;
     background-color: lightpink;
     text-align: center;
+}
+
+.zone6{
+    width: 100%;
+    height: 1000px;
+    border: 3px solid lightseagreen;
+}
+
+.haut1{
+    width: 25%;
+    height: 200px;
+    background-color: lightpink;
+    text-align: center;
+    float: left;
+}
+
+.haut2{
+    width: 50%;
+    height: 200px;
+    background-color: lightcoral;
+    text-align: center;
+    display: inline-block;
+}
+
+.haut3{
+    width: 25%;
+    height: 200px;
+    background-color: lightpink;
+    text-align: center;
+    float: right;
+}
+
+.aside{
+    width: 20%;
+    height: 700px;
+    background-color: lightseagreen;
+    float: left;
+    text-align: center;
+}
+
+.amenu{
+    width: 40%;
+    height: 300px;
+    background-color: lightcyan;
+    display: inline-block;
+    text-align: center;
+}
+
+.B{
+    width: 40%;
+    height: 300px;
+    background-color: lightblue;
+    float: right;
+    text-align: center;
+}
+
+.slideshow{
+    width: 80%;
+    height: 250px;
+    background-color: lightgreen;
+    display: inline-block;
+    text-align: center;
+}
+
+.C{
+    width: 20%;
+    height: 150px;
+    background-color: lightcyan;
+    float: left;
+    text-align: center;
+}
+
+.D{
+    width: 20%;
+    height: 150px;
+    background-color: lightskyblue;
+    float: left;
+    text-align: center;
+}
+
+.E{
+    width: 20%;
+    height: 150px;
+    background-color: lightcyan;
+    float: left;
+    text-align: center;
+}
+
+.F{
+    width: 20%;
+    height: 150px;
+    background-color: lightskyblue;
+    float: left;
+    text-align: center;
+}
+
+#bloc{
+    height: 150px;
+    width: 100%;
+}
+
+.Bas{
+    width: 100%;
+    height: 94px;
+    background-color: lightsalmon;
+    text-align: center;
+}
+
+/* Fin de la page zoning */
+
+/*****************DEBUT DE PAGE LISTE**************/
+
+ul.fruit{
+    /* je cible ul qui est dans la class fruit differend avec espace je cible la class fruit qui se trouve dans ul */
+    list-style: none;
+}
+
+ul .fruit li{
+    display: inline;
+    margin: 15px;
+}
+
+li .fa{
+    font-size: 80%;
+    color: tomato;
+}
+
+.imbriquee, .imbriquee ul{
+    padding-left: 15px;
+    margin: 5px;
+    cursor: pointer; 
+}
+
+/* .imbriquee li:not(.eu), .imbriquee li:not(.asie){
+
+    margin-left:15px;
+
+ } */
+
+.asie ul li:hover{
+    color: tomato;
+    font-size: 30px;
+    transition:2s;
+}
+
+.asie span:hover{
+    color: tomato;
+    font-size: 30px;
+    transition: 1s;
+}
+
+.eu ul li:hover{
+    color: tomato;
+    font-size: 30px;
+    transition: 1s;
+}
+
+.eu span:hover{
+    color: tomato;
+    font-size: 30px;
+    transition: 1s;
+}
+
+.asie span, .eu span{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*****************FIN DE LA PAGE LISTE**************/
+
+/*****************DEBUT DE LA PAGE LIENS ET MENUS**************/
+
+/* Les 3 boutons */
+.container{
+    border-top: 3px solid lightseagreen;
+    border-bottom: 3px solid lightseagreen;
+    padding: 40px;
+}
+
+.liens{
+    text-align: center;
+    margin: 15px;
+}
+
+.liens a{
+    text-decoration: none;
+    height: 30px;
+    width: 50px;
+    background-color: lightpink;
+    color: white;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 5px;
+    box-shadow: 0px 1px 24px 0px lightgreen;
+}
+
+a:hover{
+    font-size: 150%;
+    transition: 1s;
+}
+
+.liens a:hover{
+    color: lightgreen;
+}
+
+/* Les liens */
+
+#sectionLien a{
+    text-decoration: none;
+    color: cornflowerblue;
+    font-size: 18px;
+}
+
+/* Les menus */
+#menus{
+    text-align: center;
+    margin: 15px;
+}
+
+#menus a{
+    text-decoration: none;
+    height: 30px;
+    width: 50px;
+    background: transparent;
+    color: lightcoral;
+    border: 2px solid lightcoral;
+    border-radius: 5px;
+    padding: 12px;
+    margin: 5px;
+}
+
+/* Les menus déroulants */
+
+#menuDeroulant{
+    height: 650px;
+}
+
+#menuDeroulant nav{
+    background: transparent;
+    border: none;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#menuDeroulant nav ul li{
+    float: left;
+    list-style: none;
+    width: 20%;
+}
+
+#menuDeroulant ul ul{ /*Les listes qui sont dans les listes*/
+    display: none;
+}
+
+#menuDeroulant nav ul li ul li{
+    width: 100%;
+}
+
+#menuDeroulant nav li{
+    background: lightgoldenrodyellow;
+}
+
+#menuDeroulant nav li a{
+    text-decoration: none;
+    color: #000;
+    display: block; /* pour qu'il s'étende sur toute la longueur de son conteneur*/
+    background: mistyrose;
+}
+
+#menuDeroulant nav ul.niveau1 li.sousMenu:hover ul.niveau2{
+    display: block;
+}
+
+/*****************FIN DE LA PAGE LIENS ET MENUS**************/
+
+/*****************DEBUT DE LA PAGE TABLEAUX**************/
+
+table{
+    border-collapse: collapse;
+    text-align: center;
+    margin: auto;
+}
+
+td{
+    border: 2px ridge lightcoral;
+    padding: 7px;
+}
+
+table td:first-of-type{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+table tr:first-child{
+    background-color: lightgreen;
+}
+
+tfoot{
+    background-color: lightgreen;
+}
+
+.fa{
+    margin: 5px;
+}
+
+/*****************FIN DE LA PAGE TABLEAUX**************/
+
+/*****************DEBUT DE LA PAGE FORMULAIRE**************/
+
+.formulaire{
+    width: 80%;
+    height: 620px;
+    background-color: lightcyan;
+    border-radius: 25px;
+    margin: auto;
+    padding: 30px;
+}
+
+label{
+    margin: 10px 0;
+    width: 50%; 
+    display: inline-block;
+}
+
+textarea{
+    resize: none;
+}
+
+label[for="orange"], label[for="fraise"],label[for="mangue"]{
+    width: 10%;
+}
+
+/*****************FIN DE LA PAGE FORMULAIRE**************/
+
+/*****************DEBUT DE LA PAGE ANIMATION**************/
+
+#bulle{
+    width: 50%;
+    height: 250px;
+    background-image: radial-gradient(circle at center, lightskyblue, cornflowerblue);
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    padding: 40px;
+}
+
+/* #bulle a{
+    text-decoration: none;
+    color: white;
+} */
+
+#tralala #bulle .tralala a{
+    text-decoration: none;
+    color: white;
+    transition: none !important;
+}
+
+.tralala a:hover{
+    text-decoration: none;
+    color: white;
+    transition: none !important;
+}
+
+.tralala a[href="google.com"]{
+    transition: none !important;
+    background-color: rebeccapurple;
 }
