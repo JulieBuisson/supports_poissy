@@ -1,0 +1,476 @@
+.contenant{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Header */
+
+/* Partie 1 */
+.head1{
+    width: 100%;
+    height: 50px;
+    background-color: dimgray;
+}
+
+.satisfait{
+    color: white;
+    margin-left: 120px;
+    float: left;
+}
+
+.aide{
+    color: white;
+    display: inline-block;
+    margin-left: 550px;
+}
+
+.num{
+    color: white;
+    display: inline-block;
+}
+
+.appel{
+    color: white;
+    display: inline-block;
+}
+
+.paiement{
+    color: white;
+    float: right;
+    margin-right: 120px;
+}
+
+/* Partie 2 */
+
+.head2{
+    width: 1622px;
+    height: 150px;
+    background-color: #F8F8F8;
+    padding-top: 40px;
+    padding-left: 145px;
+    padding-right: 120px;
+    border-bottom: 1px solid #696969;
+}
+
+.logo{
+    float: left;
+}
+
+.devis{
+    position: absolute;
+    top: 70px;
+    right: 370px;
+}
+
+.d1{
+    display: inline;
+    float: left;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.d2{
+    display: inline;
+    float: left;
+}
+
+.compte{
+    position: absolute;
+    top: 70px;
+    right: 130px;
+}
+
+.d3{
+    display: inline;
+    float: left;
+    margin-right: 10px;
+}
+
+.d4{
+    display: inline;
+    float: right;
+    margin-top: 15px;
+}
+
+.conseils{
+    position: absolute;
+    top: 150px;
+    right: 330px;
+}
+
+.panier{
+    position: absolute;
+    top: 150px;
+    right: 120px;
+}
+
+.nav{
+    width: 100%;
+    height: 20px;
+    background-color: #F8F8F8;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.menu{
+    float: left;
+    margin-left: 15px;
+}
+
+.ref{
+    margin-left: 20px;
+    margin-right: 40px;
+    padding-right: 60px;
+    display: inline-block;
+    text-decoration: none;
+    border-right: 1px solid #696969;
+}
+
+.href{
+    text-decoration: none;
+    color: black;
+}
+
+.rbouton{
+    float: right;
+    margin-right: 80px;
+}
+/* Fin du header */
+
+/* Debut 1ere partie avec caroussel */
+
+#slideshow { /*CAROUSSEL*/
+	width: calc(806px*1.5);
+	height: 650px;
+    margin-left: 50px;
+    float: left;
+    /* background: red; */
+}
+
+#slideshow .container {
+	position:relative;
+	width: calc(806px*1.5);
+	height: 650px;
+    overflow: hidden;
+}
+
+#slideshow .slider {
+	position: absolute;
+	left:0; top:0;
+	width: 400%;
+    height: 310px;
+    animation: slider 25s infinite;
+}
+
+#slideshow figure {
+	position:relative;
+	display:inline-block;
+	padding:0; margin:0;
+}
+
+#slideshow figcaption {
+	position:absolute;
+	left:0; right:0; bottom: 5px;
+    text-align:left;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+	word-spacing: 1px;
+	background: #2225;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+}
+
+@keyframes slider {
+	0%, 20%, 100%	{ left: 0 }
+	30%, 60%		{ left: -100% }
+	75%, 95%		{ left: -200% }
+}
+
+/* Fin Du Caroussel */
+
+/*Zone à droite du caroussel */
+.s-droite{
+    width: calc(100% - 1306px);
+    float: left;
+}
+
+.carrelages{
+    background-image: url(../IMG/carrelage1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 500px;
+    height: 300px;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.parquets{
+    background-image: url(../IMG/carrelage8.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 500px;
+    height: 300px;
+    position: relative;
+    margin-left: 40px;
+
+}
+
+.s-droite a{
+    width: 490px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background: #F52875;
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+}
+
+/*Fin de la zone à droite du caroussel */
+
+/*Debut de la 2eme section */
+
+.go{
+    float: left;
+}
+
+.float{
+    float: left;
+}
+
+.blabla{
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.cadena{
+    float: left;
+    margin-left: 50px;
+}
+
+.echantillon{
+    margin-left: 280px;
+    display: inline-block;
+}
+
+.smile{
+    float: right;
+    margin-left: 280px;
+}
+
+.euro{
+    float: right;
+    margin-right: 250px;
+    margin-top: 20px;
+}
+
+/*fin de la 2eme section */
+
+/*Debut de la 3eme section */
+/* j'ai rajouter ca */
+.carreaux1{
+    float: left;
+    margin-right: 100px;
+    margin-left: 100px;
+    border: 1px solid gray;
+    margin-bottom: 30px;
+}
+/* j'ai rajouter ca */
+.carreaux2{
+    float: left;
+    margin-right: 100px;
+    margin-left: 100px;
+    border: 1px solid gray;
+    margin-bottom: 30px;
+}
+/* j'ai rajouter ca */
+.carreaux3{
+    float: left;
+    margin-right: 100px;
+    margin-left: 100px;
+    border: 1px solid gray;
+    margin-bottom: 30px;
+}
+/* j'ai rajouter ca */
+.carreaux4{
+    float: left;
+    margin-right: 100px;
+    margin-left: 100px;
+    border: 1px solid gray;
+}
+/* j'ai rajouter ca */
+.carreaux5{
+    float: left;
+    margin-right: 100px;
+    margin-left: 100px;
+    border: 1px solid gray;
+}
+
+/* j'ai rajouter ca */
+.carreaux6{
+    float: left;
+    margin-right: 100px;
+    margin-left: 100px;
+    border: 1px solid gray;
+}
+
+/* j'ai rajouter ca */
+#mesProduits{
+    height: 1050px;
+}
+
+/* c'était ici !!!!! tu avais mis une taille plus petite que tes div du coup cela ne pouvait pas rentrer!!!  */
+.produit{
+    height: 450px;
+    text-align: center;
+
+}
+
+.produit h5{
+    color: #f52674;
+    font-size: 18px;
+}
+
+.minigris{
+    background-color: rgb(51, 51, 51);
+    float: left;
+    width: 50%;
+    font-size: 18px;
+    height: 30px;
+}
+
+.minigris i{
+    float:left;
+    margin-top:3px;
+    margin-left: 10px;
+    color:#fff;
+}
+
+.minigris a{
+    float:left;
+    text-align: center;
+    margin-left:10px;
+    margin-top:3px;
+    color:#fff;
+    text-decoration: none;
+}
+ 
+ .minirose{
+    background-color:  #f52674;
+    float: left;
+    width: 50%;
+    font-size: 18px;
+    height: 30px;
+ }
+ 
+.minirose i{
+    float:left;
+    margin-top:3px;
+    margin-left: 10px;
+    color:#fff;
+ }
+ 
+.minirose p{
+    float:left;
+    text-align: center;
+    margin-left:10px;
+    margin-top:3px;
+    color:#fff;
+}
+
+.minigray{
+    clear: both;
+    background-color: rgb(189, 189, 189);
+    width:100%;
+    height:30px;
+    font-size: 20px;
+}
+
+.minigray i{
+    float:left;
+    margin-top:5px;
+    margin-left:30px;
+    color:#fff;
+}
+
+.minigray p{
+    float:left;
+    text-align: center;
+    margin-left:10px;
+    margin-top:3px;
+    color:#fff;
+}
+
+/*fin de la 3eme section*/
+
+.infos{
+    width: 100%;
+    height: 400px;
+    background-color: brown; 
+    color: white;
+}
+
+.col1{
+    float: left;
+    border-right: 1px solid white;
+    padding-left: 200px;
+    padding-right: 270px;
+}
+
+.horaires{
+    display: inline-block;
+    border-right: 1px solid white;
+    padding-left: 200px;
+    padding-right: 180px;
+    
+}
+
+.nous{
+    float: right;
+    padding-right: 100px;
+}
+
+.footer{
+    width: 100%;
+    height: 1000px;
+    background-color: lightgrey;
+}
+
+.bloc1{
+    float: left;
+    padding-left: 50px;
+}
+
+.bloc2{
+    position: absolute;
+    top: 3590px;
+    left: 400px;
+}
+
+.liens{
+    color: gray;
+    line-height: 25px;
+}
+
+.label{
+    position: absolute;
+    top: 3590px;
+    left: 750px;
+}
+
+.last{
+    float: left;
+    padding-left: 20px;
+}
+
+.lost{
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
