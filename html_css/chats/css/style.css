@@ -1,0 +1,28 @@
+.container{
+    width: 50%;
+    height: 800px;
+    background-color: #28387B;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.container img{
+    float: left;
+    margin-left: 50px;
+}
+
+.mission{
+    margin-left: 150px;
+}
+
+.ligne2{
+    margin-left: 55px;
+}
+
+.ligne3{
+    margin-left: 200px;
+}
+
+.clear{
+    clear: both;
+}

@@ -86,6 +86,11 @@
     right: 120px;
 }
 
+.panier img{
+    width: 50px;
+    height: 50px;
+}
+
  /******************/
 
 .jumbotron{
@@ -138,6 +143,10 @@
 
  /******************/
 
+ .logo{
+     margin-left: 140px;
+ }
+
 .go{
     float: left;
 }
@@ -158,18 +167,18 @@
 }
 
 .echantillon{
-    margin-left: 280px;
+    margin-left: 170px;
     display: inline-block;
 }
 
 .smile{
     float: right;
-    margin-left: 280px;
+    margin-left: 170px;
 }
 
 .euro{
     float: right;
-    margin-right: 250px;
+    margin-left: 130px;
     margin-top: 20px;
 }
 
@@ -181,6 +190,7 @@
     background-color: #F52875;
     color: white;
     padding-left: 12px;
+    margin-left: 180px;
 }
 
 .card-body-a{
@@ -242,23 +252,37 @@
     height: 30px;
     line-height: 30px;
  }
- 
- .fa-scroll{
- color: rgb(51, 51, 51)!important;
- font-size:30px;
-}
- 
- .fa-search{
-    color: rgb(138, 96, 255);
-    font-size:20px;
+
+ .cardd h4{
+     text-align: center;
+ }
+
+ .cardd p{
+     font-size: 20px;
+     color: #f52674;
+     text-align: center;
  }
  
  .fa-scroll{
+    color: rgb(51, 51, 51)!important;
+    font-size:30px;
+    margin: 7px;
+}
+ 
+ .fa-search{
+    color: #f52674;
     font-size:20px;
+    margin: 7px;
+ }
+ 
+ .fa-calculator{
+    font-size:20px;
+    margin: 7px;
  }
  
  .fa-shopping-cart{
     font-size:20px;
+    margin: 7px;
  }
  
  .ajouter{
@@ -266,3 +290,227 @@
     height: 30px;
     line-height: 30px;
  }
+
+ /******************/
+
+ .shop{
+     width: 93%;
+     margin-left: -20px;
+ }
+
+ .rectangle{
+    background-color: #f52674;
+    width:100px;
+    height:40px;
+    padding:3px 5px;
+    position: relative;
+    margin-left: 200px;
+    color: white;
+}
+
+.triangle{
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    top:0;
+    right:-15px;
+    border-left: 15px solid #f52674;
+    margin-left: 200px;
+}
+
+.rectangle2, .triangle2{
+    z-index:2;
+}
+
+.eshop{
+    background-color: rgb(51, 51, 51);
+    padding-top:70px;
+    padding-bottom:10px;
+    color:#fff;
+    z-index: 1;
+    margin-top:-20px;
+    margin-left: 200px;
+}
+
+.eshop p{
+    font-size: 0.9em;
+}
+
+.eshop a{
+    color: #f52674;
+    text-decoration: none;
+}
+
+.lien {
+    text-align: center;
+    margin-top:50px;
+}
+
+.gauche{
+    float:left;
+    width:30%;
+    margin-left:20px;
+    border-right:0.5px solid #fff;
+}
+
+.droit{
+    float:left;
+    width:30%;
+    margin-left:20px;
+}
+
+.icones{
+    float:left;
+    margin-right: 20px;
+    height:200px;
+}
+
+.adresse {
+    width: 38px;
+    height: 38px;
+    background: url(../IMG/sprites.png) no-repeat;
+    background-position-y: -102px
+}
+
+.telephone{
+    margin-top:80px;
+    width: 38px;
+    height: 38px;
+    background: url(../IMG/sprites.png) no-repeat;
+    background-position-y: -137px
+}
+
+.email{
+    margin-top:50px;
+    width: 38px;
+    height: 38px;
+    background: url(../IMG/sprites.png) no-repeat;
+}
+
+.horaires{
+    width: 38px;
+    height: 38px;
+    background: url(../IMG/sprites.png) no-repeat;
+    background-position-y: -33px
+}
+
+.qui{
+    width: 38px;
+    height: 38px;
+    background: url(../IMG/sprites.png) no-repeat;
+    background-position-y: -67px
+}
+
+/*********************/
+
+.jumbotron-a{
+    height: 1300px;
+    background-color: #B0B0B0;
+}
+
+.jumbotron-a a{
+    color: grey;
+}
+
+.containerA{
+    float: left;
+    margin: 50px;
+    margin-top: 0;
+}
+
+.containerA h4{
+    border-bottom: 1px solid black;
+    width: 150%;
+    text-align: center;
+    margin:0;
+    margin-top: 0;
+}
+
+.iframe{
+    float: left;
+    margin-right: 5px;
+}
+
+.frame{
+    display: inline-block;
+}
+
+.containerB{
+    float: left;
+    margin: 120px;
+    margin-top: 0;
+}
+
+.containerB h4{
+    border-bottom: 1px solid black;
+    width: 150%;
+    text-align: center;
+    margin: 40px;
+    margin-top: 0;
+}
+
+.containerC{
+    float: left;
+    margin: 120px;
+    margin-top: 0;
+}
+
+.containerC h4{
+    border-bottom: 1px solid black;
+    width: 150%;
+    text-align: center;
+    margin: 40px;
+    margin-top: 0;
+}
+
+.containerC img{
+    margin-left: 100px;
+}
+
+.containerD{
+    display: inline-block;
+    margin: 100px;
+    margin-top: 0;
+}
+
+.containerD h4{
+    border-bottom: 1px solid black;
+    width: 100%;
+    text-align: center;
+    margin: 50px;
+    margin-top: 0;
+}
+
+.newsletter{
+    width: 350px;
+    height: 150px;
+    background-color: #EBE7E8;
+    padding: 5px;
+}
+
+.envoyer{
+    width: 350px;
+    height: 300px;
+    background-color: #EBE7E8;
+    padding: 5px;
+}
+
+.texte{
+    margin-left: 25px;
+    text-align: left;
+    position: absolute;
+    top: 3250px;
+}
+
+.final p{
+    text-align: center;
+}
+
+.final img{
+    margin-left: 50%;
+    margin-bottom: 50px;
+}
+
+/***********************/
