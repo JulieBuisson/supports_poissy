@@ -48,6 +48,7 @@ nav a{
 nav img{
     margin-right: 250px;
     margin-top: 10px;
+    border-radius: 50%;
 }
 
 .fondNoir{
@@ -172,6 +173,7 @@ footer p{
     color: #A4D404;
     padding-left: 25px;
     padding-top: 15px;
+    float: left;
 }
 
 footer a{
@@ -179,25 +181,11 @@ footer a{
     color: #A4D404;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+footer i{
+    float: right;
+    margin-top: 15px;
+    padding-right: 20px;
+}
 
 .clear{
     clear: both;
