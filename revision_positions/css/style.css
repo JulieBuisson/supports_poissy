@@ -1,0 +1,120 @@
+body h3{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: lightseagreen;
+    margin: 0;
+    padding: 0;
+}
+
+/************************************************************************************/
+
+/* .container{
+    margin: auto;
+    padding: 30px;
+    width: 60%;
+    height: auto;
+    background-color: lightblue;
+}
+
+.zoneA{
+    width: 50%;
+    height: 200px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+}
+
+.zoneB{
+    width: 50%;
+    height: 200px;
+    border: 2px solid black;
+} */
+
+.container{
+    width: 960px; /*Valeur habiutelle pour les sites car facilement divisible pour organiser les blocs */
+    background: #f4c400;
+    margin: 0 auto; /*Centrage auto = pas de marge en haut et bas mais la marge a gauche et droite sera le meme quel que soit la taille de l'écran */
+    padding: 30px;
+    box-sizing: border-box; /*Permet de verrouiller le conteneur sur 960px sans que le padding vienne agrandir le bloc */
+}
+
+.zoneA, .zoneB{
+    height: 150px;
+    width: 450px;
+    border: 2px solid black;
+    margin: 10px 10px;
+    display: inline-block; /*Affiche en 2 blocs alignés, ILINE seul crée 2 cadres qui entourent uniquement le contenu comme le surlignage, BLOCK seul affiche 2 blocs l'un au dessus de l''autre */
+    vertical-align: middle; /*Centrer verticalement les 2 blocs a et b */
+} /*a et b ayant les memes propriétés on les rassemble */
+
+/************************************************************************************/
+
+#menu{
+    width: 100%;
+    height: 50px;
+    background-color: lightpink;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#texte{
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    margin-top: 70px;
+}
+
+/************************************************************************************/
+
+.boxA, .boxB{
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 3px;
+}
+
+.boxA{
+    background-color: lightgreen;
+}
+
+.boxB{
+    background-color: lightpink;
+}
+
+.boxB:nth-child(5){
+    clear: both;
+}
+.boxA:nth-child(8){
+    clear: both;
+}
+.boxB:nth-child(10){
+    clear: both;
+}
+
+/************************************************************************************/
+
+#fixe{
+    width: 1000px;
+    border: 2px solid violet;
+}
+
+#fixe p{
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+#variable{
+    width: 100%;
+    border: 2px solid blueviolet;
+}
+
+#variable p{
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+/************************************************************************************/
