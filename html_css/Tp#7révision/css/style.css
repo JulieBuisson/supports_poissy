@@ -1,0 +1,309 @@
+.container{
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+nav{
+    width: 100%;
+    height: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: url(../img/bg_header.PNG); 
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+nav img{
+    float: left;
+    margin-left: 20px;
+}
+
+nav a{
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+nav i{
+    color: aqua;
+}
+
+nav p{
+    float: right;
+    text-transform: uppercase;
+}
+
+nav div{
+    float: right;
+    margin-right: 100px;
+}
+
+nav div i{
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    color: black;
+    margin: 15px;
+    padding: 10px;
+}
+
+#pret{
+    width: 55%;
+    height: 680px;
+    /* background-color: cornflowerblue; */
+    background: url(../img/Photo-groupe.jpg) no-repeat;
+    background-position: -200px -100px;
+    float: left;
+}
+
+#pret h2{
+    font-size: 50px;
+    color: white;
+    padding-top: 250px;
+    text-align: left;
+    padding-left: 100px;
+    float: left;
+}
+
+#pret p{
+    font-size: 20px;
+    color: white;
+    padding-left: 100px;
+    float: left;
+}
+
+#pret button{
+    height: 40px;
+    background-color: yellow;
+    box-shadow: 0 10px 0 yellowgreen;
+    margin-right: 370px;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+header .fas{
+    color: yellow;
+    float: right;
+    padding-top: 380px;
+    padding-right: 20px;
+}
+
+#middle{
+    width: 35%;
+    height: 800px;
+    float: left;
+    margin-bottom: -155px;
+}
+
+#reunion h4{
+    width: 400px;
+    height: 70px;
+    font-size: 25px;
+    background-color: yellow;
+    padding: 10px;
+    margin: 0;
+}
+
+#reunion{
+    margin-left: 40px;
+}
+
+#reunion p{
+    width: 400px;
+    height: 50px;
+    background-color: #AADAFF;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid white;
+    color: white;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 25px;
+}
+
+#reunion span{
+    color: black;
+    font-weight: bold;
+}
+
+
+#reunion a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    margin-left: 5px;
+    padding: 3px;
+}
+
+#reseaux{
+    float: right;
+    width: 10%;
+    color: blue;
+}
+
+#reseaux p{
+    writing-mode: vertical-rl;
+    text-orientation: unset;
+    font-size: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+    text-align: left;
+    color: black;
+}
+
+header hr{
+    width: 130%;
+    margin-left: -215px;
+    margin-bottom: 10px;
+}
+
+header p:last-child{
+    font-size: 11.5px;
+}
+
+header p:last-child button{
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+#logo div{
+    float: left;
+    margin-bottom: 50px;
+    margin-top: 80px;
+    margin-right: 60px;
+}
+
+#logo div:nth-child(3){
+    margin-top: 80px;
+}
+
+#logo div p{
+    border-top: 1px solid cornflowerblue;
+}
+
+#timer{
+    text-align: left;
+}
+
+#timer button{
+    color: white;
+    background-color: #6CA0AB;
+    padding: 8px;
+    box-shadow: 0 3px 0 lightseagreen;
+}
+
+#timer .fas{
+    float: left;
+    width: 15%;
+    margin-left: 150px;
+}
+
+#timer div{
+    display: inline-block;
+    width: 60%;
+}
+
+#franchir{
+    width: 100%;
+    height: 600px;
+    background-color: #66CCCC;
+    display: inline-block;
+}
+
+#franchir h3{
+    font-size: 30px;
+}
+
+#franchir span{
+    color: white;
+}
+
+#franchir div{
+    display: inline-block;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+#video{
+    float: left;
+    margin-left: 150px;
+}
+
+#txtbleu{
+    display: inline-block;
+    width: 30%;
+    color: #66CCCC;
+    font-weight: bold;
+    text-align: left;
+    margin-left: -230px;
+}
+
+#txtbleu strong{
+    color: black;
+}
+
+#maubeuge{
+    float: left;
+    width: 20%;
+}
+
+.imgA{
+    width: 283px;
+    height: 300px;
+    background: url(../img/Affiche-formation-cyber-768x1089.jpg) no-repeat -250px -380px;;
+}
+
+#paris{
+    display: inline-block;
+    width: 20%;
+    margin-right: 50px;
+}
+
+.imgB{
+    width: 283px;
+    height: 300px;
+    background: url(../img/Salon_IDF.png) no-repeat -145px -180px;
+}
+
+#marseille{
+    display: inline-block;
+    width: 20%;
+    margin-left: 50px;
+}
+
+#cargo{
+    display: inline-block;
+    margin-left: 70px;
+    width: 20%;
+}
+
+#partenaire h3{
+    font-size: 35px;
+}
+
+#partenaire img{
+    margin-right: 50px;
+}
+
+footer{
+    width: 100%;
+    height: 1000px;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.clear{
+    clear: both;
+}
