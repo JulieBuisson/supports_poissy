@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background: #000;
+}
+
+#main-header{
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+}
+
+#espace-personnel{
+    display: flex;
+    justify-content: space-around;
+}
+
+h2{
+    text-align: right;
+}
+
+#main-navigation ul{
+    display: flex;
+}
+
+.article-section{
+    display: flex;
+    justify-content: center;
+}
+
+#footer-navigation ul{
+    display: flex;
+}
+
+#services{
+    display: flex;
+}
+
+#reseaux-sociaux{
+    display: flex;
+}
+
+.copyright{
+    text-align: center;
+}
+
+section{
+    width: 60%;
+    margin: auto;
+}
+
+section .banniere > img{
+    width: 100%;
+}
+

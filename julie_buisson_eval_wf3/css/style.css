@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Debut du header */
+
+header{
+    width: 100%;
+    height: 250px;
+    background-color: #bcb8af;
+    position: relative;
+}
+
+header div, nav{
+    width: 50%;
+    margin: auto;
+}
+
+/*LE LOGO*/
+
+#logoHeader{
+    position: relative;
+    top: 51px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 40px;
+    border-left: 7px solid #f6b73c;
+}
+
+#logoHeader p{
+    font-size: 27px;
+}
+
+#logoHeader p span{
+    color: #EA9F05;
+    border: none;
+}
+
+/*LES ICONES*/
+
+#icone{
+    width: 29%;
+    height: 65px;
+    background-color: #2d2d2d;
+    position: absolute;
+    top: 23%;
+    left: 50%;
+}
+
+#icone div:first-child{
+    float: left;
+    width: 10%;
+    padding-left: 10%;
+}
+
+#icone div:first-child img{
+    padding-top: 5px;
+}
+
+#icone div:nth-child(2){
+    display: inline-block;
+    width: 10%;
+    padding-left: 37%;
+}
+
+#icone div:nth-child(2) img{
+    padding-top: 5px;
+}
+
+#icone p{
+    text-align: right;
+    margin-right: 10px;
+    padding-top: 5px;
+    font-size: 23px;
+}
+
+/*LA NAV*/
+
+nav{
+    position: absolute;
+    top: 87%;
+    left: 50%;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-bottom: 12px;
+    font-size: 18px;
+}
+
+nav a:first-child{
+    border-left: 1px solid black;
+}
+
+nav a:nth-child(2){
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+nav a:last-child{
+    border-right: 1px solid black;
+}
+
+/* Fin du header */
+
+
+
+/*Debut du container */
+
+.container{
+    width: 53%;
+    margin: auto;
+}
+
+
+/* Debut du main */
+
+/*LES GANTS*/
+
+.gantNoir{
+    width: 366px;
+    float: left;
+    margin: 30px;
+    position: relative;
+}
+
+.gantNoir img{
+    margin-bottom: -35px;
+}
+
+.gantNoir p{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.gantRouge{
+    width: 366px;
+    float: right;
+    margin: 30px;
+    position: relative;
+}
+
+.gantRouge img{
+    margin-bottom: -35px;
+}
+
+.gantRouge p{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+/*LES RECTANGLES ORANGES*/
+
+.carreOrange{
+    width: 80px;
+    height: 50px;
+    background-color: #EA9F05;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*LES PRIX*/
+
+.prix{
+    width: 366px;
+    height: 80px;
+}
+
+.prix p{
+    width: 40px;
+    padding-top: 15px;
+    font-size: 25px;
+    text-align: right;
+    position: absolute;
+    right: 80px;
+    text-decoration: line-through;
+    padding: 5px;
+    margin-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.prix span{
+    padding-left: 15px;
+    font-size: 35px;
+    color: #EA9F05;
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    padding-right: 15px;
+    font-weight: bold;
+}
+
+.prix p, span{
+    border-bottom: 1px solid black;
+}
+
+
+/* fin du main */
+/* Fin du container */
+
+
+/* Debut du footer */
+
+footer{
+    width: 100%;
+    height: 500px;
+    background-color: #4c4c4c;
+    position: relative;
+}
+
+footer div{
+    width: 60%;
+    margin: auto;
+}
+
+/*TRAIT DE SEPARATION*/
+
+#traitBlanc{
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    position: absolute;
+    top: 25px;
+}
+
+/*BARRE D'INFORMATIONS*/
+
+#barreGrise{
+    display: inline-flex;
+    width: 20%;
+    height: 35px;
+    background-color: #eaeaea;
+    position: absolute;
+    left: 40%;
+    top: 25px;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: inset 0px 10px 8px -10px gray;
+}
+
+#barreGrise a{
+    text-decoration: none;
+    color: black;
+    padding-top: 8px;
+}
+
+.rondOrange{
+    width: 15px;
+    height: 15px;
+    background-color: #EA9F05;
+    border-radius: 50%;
+}
+
+/*LES ICONES*/
+
+#rond{
+    width: 45%;
+    position: absolute;
+    top: 120px;
+    left: 30%;
+    text-align: center;
+}
+
+#livre{
+    float: left;
+    width: 200px;
+}
+
+#camion{
+    display: inline-block;
+    width: 200px;
+    margin-right: 8px;
+}
+
+#cadenat{
+    display: inline-block;
+    width: 200px;
+    margin-left: 8px;
+}
+
+#pouce{
+    float: right;
+    width: 200px;
+}
+
+/* RESEAUX SOCIAUX */
+
+#reseauxSociaux{
+    width: 25%;
+    position: absolute;
+    bottom: 55px;
+    left: 40%;
+    border-top: 1px solid gray;
+}
+
+#reseauxSociaux img{
+    margin: 50px;
+    margin-left: 70px;
+}
+
+/*TEXTE DE FIN*/
+
+#sport{
+    width: 350px;
+    position: absolute;
+    bottom: 20px;
+    left: 43%;
+}
+
+/* Fin du footer */
+
+.clear{
+    clear: both;
+}
+
