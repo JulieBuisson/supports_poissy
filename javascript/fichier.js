@@ -581,7 +581,68 @@ d(Voiture.motorisation.energie);
 
 for (var elements in Voiture) {
     d("propriétés : " + elements + " valeur : " + Voiture[elements]);
-    for (var elements in Voiture.motorisation) {
-        d("propriétés : " + elements + " valeur : " + Voiture.motorisation[elements]);
+    
+    if(typeof Voiture[elements] == "object"){
+        for(var elemnts in Voiture.motorisation){
+            d("propriétés : " + elemnts + " valeur : " + Voiture.motorisation[elemnts]);
+        }
     }
 }
+
+//creer un objet Joueur avec 3 caractéristiques (force, experience et race) afficher les.
+
+var Joueur = {
+    force: 100,
+    experience: "jeune padawan",
+    race: "jedi"
+}
+
+d(Joueur.force + " " + Joueur.experience + " " + Joueur.race);
+
+for (var game in Joueur){
+    d("Propriétées du Joueur : " + game + " " + Joueur[game]);
+}
+
+
+function Animal(nom,espece,categorie,age){
+    this.nom =nom,
+    this.espece = espece,
+    this.categorie = categorie,
+    this.age = age
+}
+var lion = new Animal("Simba", "lion", "felin", 10);
+var dauphin = new Animal("flipper", "dauphin", "mammifere", 12);
+
+d(lion.nom);
+d(dauphin.categorie);
+
+//creer une classe Joueur avec experience, force et race
+//creer 2 joueurs
+
+function Player(experience,force,race){
+    this.experience = experience,
+    this.force = force,
+    this.race = race
+}
+var noob = new Player("2%", 0, "Cra");
+var pgm = new Player("100%", "Maximale", "Sacri");
+
+d(noob.experience + " " + noob.force + " " + noob.race);
+d(pgm.experience + " " + pgm.force + " " + pgm.race);
+
+
+function Vehicule(marque){
+    this.marque = marque;
+}
+var megan = new Vehicule("Renault");
+
+megan.demarrer = function(){
+    d("vroum vroum la voiture demarre");
+}
+megan.demarrer();
+d(megan.marque);
+
+megan.freiner = function(){
+    d("je freine");
+}
+megan.freiner();
