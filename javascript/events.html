@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 onclick="alert('j\'ai cliqué sur mon titre')">Mon titre h1</h1>
+
+    <div>
+        <img onclick="" title="un lionceau" id="monImage" src="img/0.jpeg" alt="lionceau">
+    </div>
+
+    <button id="changerImage">Changer l'image et le titre</button>
+
+    <h2>Plop</h2>
+
+    <script>
+
+        var boutton = document.querySelector("#changerImage");
+
+        boutton.addEventListener("click", carroussel);
+
+        function carroussel() {
+            var monImage = document.querySelector("#monImage");
+            var monImageSource = monImage.getAttribute("src");
+
+            switch (monImageSource) {
+                case 'img/0.jpeg':
+                    monImage.src = "img/1.jpg";
+                    break;
+                case 'img/1.jpg':
+                    monImage.src = "img/2.jpg";
+                    break;
+                case 'img/2.jpg':
+                    monImage.src = "img/3.jpg";
+                    break;
+                case 'img/3.jpg':
+                    monImage.src = "img/0.jpeg";
+                    break;
+            }
+        }
+
+        // var changerImage = document.querySelector("#changerImage");
+        // changerImage.onclick = function () {
+        //     document.getElementById("monImage").src = "img/1.jpg";
+        // }
+
+        // var monImage = document.querySelector("#monImage");
+        // monImage.onclick = function () {
+        //     document.getElementById("monImage").src = "img/0.jpeg";
+        //     document.getElementById("monImage").title = "un bébé lion";
+        // }
+
+        //au survol de la souris sur le titre h1 on surligne en rouge.
+        //mouseOver
+        var monTitre = document.querySelector("h1");
+        monTitre.onmouseover = function () {
+            monTitre.style.background = "lightpink";
+        }
+        monTitre.onmouseout = function () {
+            monTitre.style.background = "none";
+        }
+
+
+        var monH2 = document.getElementsByTagName("h2")[0];
+        monH2.addEventListener("mouseover", changertxt);
+        function changertxt() {
+            monH2.innerHTML = "Bwa !";
+        }
+        monH2.addEventListener("mouseout", function () {
+            monH2.innerHTML = "Plop";
+        });
+
+
+    </script>
+
+</body>
+
+</html>

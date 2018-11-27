@@ -202,7 +202,7 @@ function heal() {
         d(eni.pseudo + " se soigne, elle a maintenant " + Math.ceil(eni.pdv) + " points de vie");
         popo -= 1;
     }
-};
+}; 
 
 var puissance = 3;
 function steroide() {
@@ -258,4 +258,3 @@ function attakAdverse(){
       break;
     }
 };
-

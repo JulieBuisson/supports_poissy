@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html>
+<head>
+    <title>Les Selecteurs JS</title>
+</head>
+
+<body>
+    <div id="main-nav">
+        
+        <ul>
+            <li><a href="#">Lien 1</a></li>
+            <li><a href="#">Lien 1</a></li>
+            <li><a href="#">Lien 1</a></li>
+            <li><a href="#">Lien 1</a></li>
+        </ul>
+
+    </div>
+
+
+
+    <h1>Titre principale de ma page</h1>
+
+    <section class="container">
+
+        <h2>Sous-titre</h2>
+
+        <p>Lorem ipsum dolor <span>sit amet</span>, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute <span>irure dolor in reprehenderit</span> in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+        <h2>Sous-titre</h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis <span>nostrud exercitation</span> ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor <span>in reprehenderit in</span>in reprehenderit in voluptate velit esse
+            <span>cillum dolore eu fugiat</span> nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    </section>
+
+
+
+    <section class="container">
+
+        <h2>Sous-titre</h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+        <h2>Sous-titre</h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    </section>
+
+
+    <footer>
+
+        <div id="footer-navigation">
+
+            <ul>
+                <li><a href="#">Lien 1</a></li>
+                <li><a href="#">Lien 1</a></li>
+                <li><a href="#">Lien 1</a></li>
+                <li><a href="#">Lien 1</a></li>
+            </ul>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- <div class="avion">air bus 1</div>
+    <div class="avion">air bus 2</div>
+    <div class="avion">air bus 3</div>
+
+    <div class="voiture">Voiture 1</div>
+    <div class="voiture">Voiture 2</div>
+    <div class="voiture">Voiture 3</div>
+
+    <p>Paragraphe 1</p>
+    <p>Paragraphe 2</p>
+    <p>Paragraphe 3</p>
+    <p>Paragraphe 4</p>
+    <p>Paragraphe 5</p>
+
+    <section id="maSection">Section</section>
+
+    <span>Un Span</span>
+
+    <div id="resultat">résultat...</div> -->
+
+    <script>
+
+        /* INFORMATIONS : pour modifier le style en js il existe la propriété "style" je vous laisse le soin de regarder comment celle ci fonctionne sur internet pour l'adapter à l'exerice.
+        
+        -- Combien y a t-il de span dans mon document ? Afficher la reponse dans la console. -- Afficher leur valeur (contenu) et les surligner en jaune.
+        -- Pareil pour les liens présents dans mon document sauf qu'ils seront surlignés en bleu.
+        -- Récupérer les sous-titres de mon document et modifier les contenu à la place de "Sous-titre" je veux avoir "Mon joli sous-titre"
+        -- Mes balises p sont sans attribut class... j'aimerais ajouter des classes à mes balises "p" (cf setAttribute js) comme ça je pourrais avoir la class "mes-jolis-paragraphes" dans mes balises. */
+
+        var span = document.querySelectorAll("span");
+        console.log(span.length);
+        for(i = 0; i < span.length; i++){
+        span[i].style.textDecoration = "overline";
+        span[i].style.background = "yellow";
+            console.log(span[i].innerHTML);
+        }
+
+        var a = document.querySelectorAll("a");
+        console.log(a.length);
+        for(i = 0; i < a.length; i++){
+        a[i].style.textDecoration = "overline";
+        a[i].style.background = "lightblue";
+            console.log(a[i].innerHTML);
+        }
+
+        var h = document.querySelectorAll("h2");
+        for(i = 0; i < h.length; i++){
+            h[i].innerHTML = "Mon joli sous-titre";
+        }
+
+        var p = document.querySelectorAll("p");
+        for(i = 0; i < p.length; i++){
+            p[i].setAttribute("class", "mes-jolis-paragraphes");
+        }
+        console.log(p);
+
+
+        //SELECTION NATURELLE (sans getElement)
+        // var monId2 = maSection;
+        // console.log("Sans getElement : " + monId2);
+        // console.log("monID2 : " + monId2.innerHTML);
+        // console.log("body : " + document.body);
+
+        //SELECTION BY ID
+        // var monId = document.getElementById("maSection");
+        // console.log("contenu de ma section : " + monId.innerHTML);
+        // console.log(monId);
+        // console.log("resultat de l'élément selectionné : " + monId);
+
+        //SELECTION TAGNAME
+        // var maBalise = document.getElementsByTagName('span');
+        // console.log(maBalise);
+        // console.log("ma balise : " + maBalise);
+        // console.log("ma balise " + maBalise[0].innerHTML);
+
+        //SELECTION CLASSNAME
+        // var mesClasses =  document.getElementsByClassName("avion");
+        // console.log(mesClasses);
+        // console.log("typeof de mesClasses : " + typeof mesClasses);
+        // console.log("mes classes[0] : " + mesClasses[0].innerHTML);
+        // mini exo afficher tous les avions dans la console.;
+        // for(i = 0; i < mesClasses.length; i++){
+        //     console.log(mesClasses[i].innerHTML);
+        // }
+
+        // SELECTION QUERYSELECTORALL --> Tous les éléments
+        // var p = document.querySelectorAll("p");
+        //afficher le type de l'élément.
+        //afficher le contenu du premier paragraphe
+        //ensuite afficher tous les paaragraphes.
+        // console.log("typeof : " + p);
+        // console.log(p[0].innerHTML);
+        // for(a = 0; a < p.length; a++){
+        //     console.log('Mes p : ' + p[a].innerHTML);
+        // }
+
+        // SELECTION QUERYSELECTOR --> Un seul élément
+        // var voiture = document.querySelector(".voiture");
+        // console.log("Contenu de ma voiture : " + voiture.innerHTML);
+
+        //recupérer la 1ere balise "p" avec un querySelector et afficher son contenu.
+        // var p = document.querySelector("p");
+        // console.log(p.innerHTML);
+
+    </script>
+</body>
+
+</html>
