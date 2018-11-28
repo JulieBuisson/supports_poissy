@@ -17,11 +17,29 @@
 <body>
 
     <div>
-        <img id="monImage" src="img/0.jpeg">
+        <img id="monImage" src="img/1.jpg">
     </div>
 
     <button id="demarrer">Lancer le carroussel</button>
     <button id="arreter">Stopper le carroussel</button>
+
+    <br>
+    <br>
+
+    <select name="name" id="name">
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+    </select>
+
+    <br>
+    <br>
+
+    <input type="text" id="couleur"> <button onclick="changement()" id="changerCouleur">Changer la couleur de fond</button> </input>
 
     <script>
 
@@ -29,21 +47,63 @@
         var monImage = document.querySelector('#monImage');
         var demarrer = document.querySelector('#demarrer');
 
-        function f(){
+        function f() {
             img += 1;
-            monImage.setAttribute("src", "images/" + img + ".jpeg");
-            if(img >=4){
+            monImage.setAttribute("src", "img/" + img + ".jpg");
+            if (img >= 5) {
                 img = 0;
             }
         }
 
-        demarrer.addEventListener("click", function (){
+        demarrer.addEventListener("click", function () {
             timer = window.setInterval("f()", 3000);
         })
 
-        arreter.addEventListener("click", function(){
+        arreter.addEventListener("click", function () {
             clearInterval(timer);
         })
+
+        /* definir un tableau de prénoms (5 minimum) et remplir un "select option" avec les prénoms */
+
+        var prenom = ["Mathieu", "Anas", "Sonia", "Mohamed", "Hakim", "Houda", "Julie"];
+        var tableau = document.getElementById("name");
+
+        for (i = 0; i < tableau.length; i++) {
+            tableau[i].innerHTML = prenom[i];
+        }
+
+        document.write("<br><br><br>");
+
+        document.write("<select>");
+        for (var i = 0; i < prenom.length; i++) {
+            document.write("<option>" + prenom[i] + "</option>");
+        }
+        document.write("</select>");
+
+        /* 
+            Demander à l'utilisateur si c'est un homme ou une femme. Ensuite lui demander son prénom. Afficher le prénom de l'utilisateur de couleur rose si c'est une femme, ou bleu si c'est un homme.
+        */
+
+        var quiC = prompt("Etes vous : un homme ou : une femme ?");
+        if (quiC == "homme" || quiC == "femme") {
+            var name = prompt("Veuillez saisir votre prénom : ");
+            if (quiC == "homme") {
+                document.write("<span style='color:blue'>" + name + "</span>");
+            }
+            if (quiC == "femme") {
+                document.write("<span style='color:pink'>" + name + "</span>");
+            }
+        }
+
+        document.write("<br><br><br>");
+
+        function changement() {
+            var color = document.getElementById('couleur');
+            var boutton = document.getElementById('changerCouleur');
+            boutton = document.body.style.background = color.value;
+        }
+
+
 
     </script>
 

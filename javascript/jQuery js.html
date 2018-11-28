@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery JS</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Il etait une fois</h1>
+        <h2>une petite souris</h2>
+        <p>qui adorait le fromage</p>
+    </header>
+
+    <section>
+        <span class="rouge">un span</span>
+    </section>
+
+    <footer>
+        <div id="monId">une div id</div>
+        <input type="checkbox" name="check">
+    </footer>
+
+
+    <button onclick="" id="bipUp">Grossir le carré</button>
+    <button onclick="" id="reset">Reset</button>
+    <div class="carre">Mon carré</div>
+
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script>
+
+        $(function () {
+            // var monTitre = $('h1');
+            // $('p:last');
+            // $('p:eq(1)');
+            // $('#monId');
+            // $("div[monId]");
+            // $('.rouge');
+            // $('span:not(.rouge)');
+            // $('input[name=nom]');
+            // $('input[type=text]');
+
+
+            // créer plusieurs éléments html et récupérer leur valeur. Par exemple <p>Il étais une fois</p> récupérer le texte "il etait une fois".
+            //Je veux : h1, h2, p, div, section, span, class, id, footer, header, checkbox
+
+            // var test = $('h1');
+            // console.log(test[0].innerHTML);
+            // test = $('h2');
+            // console.log(test[0].innerHTML);
+            // test = $('p');
+            // console.log(test[0].innerHTML);
+            // test = $('div:not(#monId)');
+            // console.log(test[0].innerHTML);
+            // test = $('section');
+            // console.log(test[0].innerHTML);
+            // test = $('span');
+            // console.log(test[0].innerHTML);
+            // test = $('.class');
+            // console.log(test[0].innerHTML);
+            // test = $('#monId');
+            // console.log(test[0].innerHTML);
+            // test = $('footer');
+            // console.log(test[0].innerHTML);
+            // test = $('header');
+            // console.log(test[0].innerHTML);
+            // test = $('checkbox');
+            // console.log($('input[type ="checkbox"]').val());
+
+        });
+
+
+        $('p').click(function () {
+            alert('j"ai cliqué sur mon texte');
+        })
+
+        $('p').mouseover(function () {
+            console.log('ouaiiiis');
+        })
+
+        //Changer la couleur du texte et son arriere plan lorque je passe sur le texte.
+        //Lorsque je sors du texte, je reviens sur l'effet d'origine.
+
+        var p = $('p').mouseover(function () {
+            p.css({
+                'color': 'yellow',
+                'background-color': 'gray',
+            });
+        });
+        $('p').mouseout(function () {
+            p.css({
+                'color': 'black',
+                'background-color': 'white',
+            });
+        });
+
+
+        //declarer une div taille 10x10 et à chaque fois que je clique sur le bouton 'agrandir' mon carré grandit de 10px ! 10x10...20x20...30x30...etc...
+        //ajouter egalement un boutton reset qui permet de revenir à la taille initiale.
+
+        var grossir = $('.bigUp');
+        var initial = $('.reset');
+        var div = $('.carre');
+        
+        $(div).css({
+            'width': '10px',
+            'height': '10px',
+            'background-color': 'red',
+        });
+
+        $("div").on("click", function () {
+            $(this).css({
+                width: function (index, value) {
+                    return parseFloat(value) * 1.5;
+                },
+                height: function (index, value) {
+                    return parseFloat(value) * 1.5;
+                }
+            });
+        });
+
+
+
+
+    </script>
+
+</body>
+
+</html>
