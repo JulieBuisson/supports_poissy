@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Facture</title>
+    <link rel="stylesheet" href="facture.css">
+</head>
+
+<body>
+
+    <div id="container">
+
+        <header>
+
+            <h1>FACTURE</h1>
+
+        </header>
+
+        <ul>
+            <li><input type="text" class="input" placeholder="Nom de la société émettrice"></li>
+            <li><input type="text" class="input" placeholder="Adresse de la société"></li>
+            <li><input type="text" class="input" placeholder="Entrez un numéro de téléphone valide"></li>
+            <li><input type="text" class="input" placeholder="Adresse de messagerie"></li>
+        </ul>
+
+        <div id="texte">
+
+            <p>N° de facture <input type="text" id="select" placeholder="01"> </p>
+            
+            <label>Date : <input type="text" id="jour"></label>
+
+               <input type="text" id="mois">
+
+               <input type="text" id="annee">
+
+        </div>
+
+        <div class="clear"></div>
+
+        <section>
+
+            <div id="client">
+                <h4> à : </h4>
+                <ul>
+                    <li>
+                        <select name="nouveau client">
+                            <option>Nouveau client</option>
+                        </select>
+                    </li>
+                    <li><input type="text" placeholder="Nom de la société"></li>
+                    <li><input type="text" placeholder="Nom"></li>
+                    <li><input type="text" placeholder="Rue"></li>
+                    <li><input type="text" placeholder="Code postal, Ville"></li>
+                    <li><input type="text" placeholder="Numéro de téléphone"></li>
+                </ul>
+            </div>
+
+            <div id="expedition">
+                <h4> expédier à : </h4>
+                <ul>
+                    <li>
+                        <select name="nouveau client">
+                            <option value="text">Nouveau client</option>
+                        </select>
+                    </li>
+                    <li><input type="text" placeholder="Nom de la société"></li>
+                    <li><input type="text" placeholder="Nom"></li>
+                    <li><input type="text" placeholder="Rue"></li>
+                    <li><input type="text" placeholder="Code postal, Ville"></li>
+                    <li><input type="text" placeholder="Numéro de téléphone"></li>
+                </ul>
+            </div>
+
+        </section>
+
+        <div class="clear"></div>
+
+        <main>
+
+        </main>
+
+    </div>
+
+
+    <script src="facture.js"></script>
+    <script type="text/javascript" src="../jquery-3.3.1.js"></script>
+
+</body>
+
+</html>

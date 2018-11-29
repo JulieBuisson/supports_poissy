@@ -26,9 +26,10 @@
     </footer>
 
 
-    <button onclick="" id="bipUp">Grossir le carré</button>
-    <button onclick="" id="reset">Reset</button>
-    <div class="carre">Mon carré</div>
+    
+    <div></div>
+
+    <button id="grandi">Agrandir</button><button id="reset">Reset</button>
 
     <script type="text/javascript" src="jquery-3.3.1.js"></script>
     <script>
@@ -102,26 +103,55 @@
         //declarer une div taille 10x10 et à chaque fois que je clique sur le bouton 'agrandir' mon carré grandit de 10px ! 10x10...20x20...30x30...etc...
         //ajouter egalement un boutton reset qui permet de revenir à la taille initiale.
 
-        var grossir = $('.bigUp');
-        var initial = $('.reset');
-        var div = $('.carre');
-        
-        $(div).css({
-            'width': '10px',
-            'height': '10px',
-            'background-color': 'red',
-        });
+        $(function(){
 
-        $("div").on("click", function () {
-            $(this).css({
-                width: function (index, value) {
-                    return parseFloat(value) * 1.5;
-                },
-                height: function (index, value) {
-                    return parseFloat(value) * 1.5;
-                }
-            });
-        });
+var hauteur = 10 , largeur = 10;                $("div").css({
+
+        "background": "red",
+
+        "width" : largeur+"px",
+
+        "height": hauteur+"px",
+
+        "border" : "1px solid black"
+
+    });
+
+
+
+$("#grandi").click(function(){
+
+
+
+    hauteur += 10;
+
+    largeur += 10;                    $("div").css({
+
+        "width" : largeur+"px",
+
+        "height": hauteur+"px"
+
+    });
+
+});                $("#reset").click(function(){
+
+    hauteur = 10; largeur=10;
+
+    
+
+    $("div").css({
+
+        "width" : largeur+"px",
+
+        "height": hauteur+"px"
+
+    });
+
+});
+
+
+
+});
 
 
 
