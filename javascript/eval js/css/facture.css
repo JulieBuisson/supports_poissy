@@ -60,9 +60,9 @@ p:last-child select option{
     width: 15px;
 }
 
-#annee{
+/* #annee{
     width: 60px;
-}
+} */
 
 .clear{
     clear: both;
@@ -71,6 +71,7 @@ p:last-child select option{
 #client{
     float: left;
     width: 40%;
+    margin-left: 30px;
 }
 
 #client h4{
@@ -107,14 +108,12 @@ p:last-child select option{
 #expedition input{
     width: 250px;
 }
-
 /* Tableau */
 
 caption{
     font-size: 35px;
     padding: 8px;
     font-weight: bold;
-    font-size: 45px;
 }
 
 table{
@@ -143,8 +142,6 @@ th{
     padding: 4px;
     width: 10%;
     height: 38px;
-    font-weight: bold;
-    font-size: 29px;
 }
 
 td{
@@ -154,29 +151,4 @@ td{
     padding: 5px;
     height: 40px;
 }
-
-.produit{
-    width: 80%;
-}
 /* fin du tableau */
-
-/* Début de la partie montant de la facture avec Sous-total, TVA, fdp et total ttc */
-
-#sousTotal{
-    width: 90%;
-    border-top: 1px solid black;
-    margin-left: 85px;
-}
-
-#sousTotal p{
-    font-size: 23px;
-    width: 20%;
-}
-
-#div div{
-    width: 25%;
-    height: 50px;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-}
