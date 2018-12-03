@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Facture</title>
-    <link rel="stylesheet" href="facture.css">
+    <link rel="stylesheet" href="css/facture.css">
 </head>
 
 <body>
 
-    <div id="container">
+    <header>
 
-        <header>
+        <h1>VOTRE FACTURE</h1>
 
-            <h1>FACTURE</h1>
+    </header>
 
-        </header>
 
+    <div id="texte">
         <ul>
             <li><input type="text" class="input" placeholder="Nom de la société émettrice"></li>
             <li><input type="text" class="input" placeholder="Adresse de la société"></li>
@@ -26,172 +26,227 @@
             <li><input type="text" class="input" placeholder="Adresse de messagerie"></li>
         </ul>
 
-        <div id="texte">
+        <p>N° de facture <input type="text" id="select" placeholder="01"> </p>
 
-            <p>N° de facture <input type="text" id="select" placeholder="01"> </p>
+        <label>Date :</label>
 
-            <label>Date :</label>
+        <select name="Day" id="jour"></select>
+        <select name="Month" id="mois"></select>
+        <select name="Year" id="annee"></select>
 
-            <select name="Day" id="jour"></select>
-            <select name="Month" id="mois"></select>
-            <select name="Year" id="annee"></select>
+    </div>
 
+    <div class="clear"></div>
+
+    <section>
+
+        <div id="client">
+            <h4> à : </h4>
+            <ul>
+                <li>
+                    <select id="newClient">
+                        <option>Nouveau client</option>
+                    </select>
+                </li>
+                <li><input type="text" placeholder="Nom de la société"></li>
+                <li><input type="text" placeholder="Nom"></li>
+                <li><input type="text" placeholder="Rue"></li>
+                <li><input type="text" placeholder="Code postal, Ville"></li>
+                <li><input type="text" placeholder="Numéro de téléphone"></li>
+            </ul>
         </div>
 
-        <div class="clear"></div>
-
-        <section>
-
-            <div id="client">
-                <h4> à : </h4>
-                <ul>
-                    <li>
-                        <select name="nouveau client" id="newClient">
-                            <option>Nouveau client</option>
-                        </select>
-                    </li>
-                    <li><input type="text" placeholder="Nom de la société"></li>
-                    <li><input type="text" placeholder="Nom"></li>
-                    <li><input type="text" placeholder="Rue"></li>
-                    <li><input type="text" placeholder="Code postal, Ville"></li>
-                    <li><input type="text" placeholder="Numéro de téléphone"></li>
-                </ul>
-            </div>
-
-            <div id="expedition">
-                <h4> expédier à : </h4>
-                <ul>
-                    <li>
-                        <select name="nouveau client" id="newExpediteur">
-                            <option value="text">Nouveau client</option>
-                        </select>
-                    </li>
-                    <li><input type="text" placeholder="Nom de la société"></li>
-                    <li><input type="text" placeholder="Nom"></li>
-                    <li><input type="text" placeholder="Rue"></li>
-                    <li><input type="text" placeholder="Code postal, Ville"></li>
-                    <li><input type="text" placeholder="Numéro de téléphone"></li>
-                </ul>
-            </div>
-
-        </section>
-
-        <div class="clear"></div>
-
-        <main>
-            <table>
-                <caption>Détails des produits facturés</caption>
-                <thead>
-                    <tr>
-                        <th>Code produit</th>
-                        <th>Libellé produit</th>
-                        <th>Prix-Unitaire en euros</th>
-                        <th>Quantité commandée</th>
-                        <th>Montant en euros</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>
-                            <select name="choix produit" class="produit"></select>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <input type="text" placeholder="0">
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <select name="choix produit" class="produit"></select>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <input type="text" placeholder="0">
-                        </td>
-                        <td></td>
-                    </tr>
-                </tbody>
-
-                <tbody>
-                    <tr>
-                        <td>
-                            <select name="choix produit" class="produit"></select>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <input type="text" placeholder="0">
-                        </td>
-                        <td></td>
-                    </tr>
-                </tbody>
-
-                <tfoot>
-                    <tr>
-                        <td>
-                            <select name="choix produit" class="produit"></select>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <input type="text" placeholder="0">
-                        </td>
-                        <td></td>
-                    </tr>
-                </tfoot>
-            </table>
-        </main>
-
-        <div class="clear"></div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
-        <div id="sousTotal">
-            <div id="p">
-                <p>sous-total</p>
-                <p>t.v.a 20,00%</p>
-                <p>port & manutention</p>
-                <p>total du (total ttc)</p>
-            </div>
-            <div class="clear"></div>
-            <div id="div">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+        <div id="expedition">
+            <h4> expédier à : </h4>
+            <ul>
+                <li>
+                    <select name="nouveau client" id="newExpediteur">
+                        <option>Nouveau client</option>
+                    </select>
+                </li>
+                <li><input type="text" placeholder="Nom de la société"></li>
+                <li><input type="text" placeholder="Nom"></li>
+                <li><input type="text" placeholder="Rue"></li>
+                <li><input type="text" placeholder="Code postal, Ville"></li>
+                <li><input type="text" placeholder="Numéro de téléphone"></li>
+            </ul>
         </div>
 
-        <div class="clear"></div>
+    </section>
 
-        <div id="remise">
-            <p>Votre facture a depassé 1000€, vous avez obtenu pour votre prochaine facture une remise de :
-                représentant 5% de votre commande ci-dessus</p>
+    <div class="clear"></div>
+
+    <main>
+        <table>
+            <caption>Détails des produits facturés</caption>
+            <thead>
+                <tr>
+                    <th>Code produit</th>
+                    <th>Libellé produit</th>
+                    <th>Prix-Unitaire en euros</th>
+                    <th>Quantité commandée</th>
+                    <th>Montant en euros</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                    <tr>
+
+                            <td>
+         
+                                <select id="produit">
+         
+                                    <option>#463652
+         
+         </option>
+         
+                                    <option>#654251
+         
+         </option>
+         
+                                    <option>#754125
+         
+         </option>
+         
+                                    <option>#895463
+         
+         </option>
+         
+                                    <option>#254879
+         
+         </option>
+         
+                                    <option>#325468
+         
+         </option>
+         
+                                </select>
+         
+                            </td>
+         
+                            <td id="libe1"></td>
+         
+                            <td id="prix1"></td>
+         
+                            <td>
+         
+                                <input type="text" placeholder="0">
+         
+                            </td>
+         
+                            <td></td>
+         
+                        </tr>
+                    <td>
+                        <select class="produit"></select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <input type="number" placeholder="0">
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <select class="produit"></select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <input type="number" placeholder="0">
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td>
+                        <select class="produit"></select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <input type="number" placeholder="0">
+                    </td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+
+    <div class="clear"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div id="sousTotal">
+        <div id="p">
+            <p>sous-total</p>
+            <p>t.v.a 20,00%</p>
+            <p>port & manutention</p>
+            <p>total du (total ttc)</p>
         </div>
+        <div class="clear"></div>
+        <div id="div">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 
-        <footer>
-            <span>Veuillez rédiger tous les chèques à l'ordre de </span>
-            <span>Pour toute question concernant cette facture, veuillez contacter : DUPONT au '00000000000' ou à l'adresse '..............'</span>
+    <div class="clear"></div>
 
-            <p>Nous vous remrecions de votre confiance</p>
+    <div id="remise">
 
-            <button onclick="window.print">Imprimer cette page</button>
-        </footer>
+        <p>N.B. Votre facture a depassé 1000€, vous avez obtenu pour votre prochaine facture une remise de :
 
+            représentant 5% de votre commande ci-dessus</p>
 
+    </div>
+
+    <br>
+
+    <br>
+
+    <footer>
+
+        <p>Veuillez rédiger tous les chèques à l'ordre de <input id="redigerCheque" type="text" placeholder="Nom de la societe"></p>
+
+        <p>Pour toute question concernant cette facture, veuillez contacter : DUPONT au <input id="telephone" type="text" placeholder="Numéro de téléphone">
+            ou à l'adresse <input id="adresse" type="text" placeholder="Adresse"></p>
+
+        <br>
+
+        <br>
+
+        <p class="merci">Nous vous remercions de votre confiance</p>
+
+        <br>
+
+        <br>
+
+        <form>
+
+            <div>
+                <button name="B1" onclick="imprimer()">Imprimer cette page</button>
+            </div>
+
+        </form>
+
+    </footer>
 
     </div>
 
 
     <script src="facture.js"></script>
-    <script type="text/javascript" src="../jquery-3.3.1.js"></script>
 
 </body>
 
