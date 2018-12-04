@@ -40,6 +40,8 @@ function Client(societe, nom, rue, code_postal_ville, numero) {
         this.numero = numero;
 }
 
+// Déclaration des nouveaux Clients
+
 var umbrella = ["Umbrella Corporation", "Umbrella", "7 rue du Hive", "66600 Racoon City", "01.34.56.28.51"];
 
 var blizzard = ["Blizzard Entertainment", "Blizzard", "112 rue de la Brise", "75015 Paris", "01.28.74.32.45"];
@@ -50,6 +52,8 @@ var fujikawa = ["Fuji Corporation", "Fujikawa", "18 blv du pecheur", "18750 Mont
 
 var ubisoft = ["Ubisoft Paris Studio", "Ubisoft", "57 avenue du Boulgour", "28475 Funkytown", "01.37.78.71.95"];
 
+// Affichage des clients dans le 1er bloc (select)
+
 var select1 = document.getElementById('newClient');
 
 select1.innerHTML += "<option>" + 'Blizzard' + "</option>";
@@ -57,6 +61,8 @@ select1.innerHTML += "<option>" + 'Sony' + "</option>";
 select1.innerHTML += "<option>" + 'Umbrella' + "</option>";
 select1.innerHTML += "<option>" + 'Ubisoft' + "</option>";
 select1.innerHTML += "<option>" + 'Fujikawa' + "</option>";
+
+// Affichage des clients dans le 2eme bloc (select)
 
 var select2 = document.getElementById('newExpediteur');
 
@@ -66,12 +72,17 @@ select2.innerHTML += "<option>" + 'Umbrella' + "</option>";
 select2.innerHTML += "<option>" + 'Blizzard' + "</option>";
 select2.innerHTML += "<option>" + 'Sony' + "</option>";
 
+// Var pour remplir les inputs du bas de la page
+
 var input = document.getElementsByTagName("input");
 var nomSociete = document.getElementById('redigerCheque');
 var tel = document.getElementById("telephone");
 var adresse = document.getElementById("adresse");
 
+// Remplissage du 1er select/option avec les valeurs de chaque clients
+
 select1.onclick = function () {
+    // Nouveau client "= false" pour pouvoir remplir les champs vides
     if (select1.value == "Nouveau client") {
         input[5].value = "";
         input[5].disabled = false;
@@ -84,6 +95,7 @@ select1.onclick = function () {
         input[9].value = "";
         input[9].disabled = false;
     }
+    // Clients pré-enregistrés "= true" pour bloquer/empecher le changement de données
     else if (select1.value == "Ubisoft") {
         input[5].value = ubisoft[0];
         input[5].disabled = true;
@@ -95,6 +107,7 @@ select1.onclick = function () {
         input[8].disabled = true;
         input[9].value = ubisoft[4];
         input[9].disabled = true;
+        // If pour renvoyer les infos pré-enregistrées en bas de la page
         if (select1.value == "Ubisoft") {
             nomSociete.value = ubisoft[0];
             tel.value = ubisoft[4];
@@ -176,14 +189,7 @@ select1.onclick = function () {
     }
 }
 
-select1.onkeyup = function () {
-    if (select1.value == "Nouveau client") {
-        nomSociete.value = input[5].value;
-        tel.value = input[7].value;
-        adresse.value = input[9].value;
-        d(nomSociete, tel, adresse);
-    }
-}
+// Remplissage du 2eme select/option avec les valeurs de chaque clients (pareil que le 1er bloc au dessus).
 
 select2.onclick = function () {
     if (select2.value == "Nouveau client") {
@@ -262,86 +268,170 @@ select2.onclick = function () {
 
 // Tableau
 
-// function Produits(code, libelle, prix) {
-//     this.code = code,
-//         this.libelle = libelle,
-//         this.prix = prix;
-// }
+function Produits(code, libelle, prix) {
+    this.code = code,
+        this.libelle = libelle,
+        this.prix = prix;
+}
 
-// var option1 = ["#463652", "Pack PS4 Slim Black 4K 2To", "399.99€"];
-// var option2 = ["#654251", "World of Warcraft Edition Collector", "369.99€"]
-// var option3 = ["#754125", "Marvel Spider Man", "69.99€"]
-// var option4 = ["#895463", "Assasin's Creed Odyssey", "69.99€"]
-// var option5 = ["#254879", "Resident Evil VII BioHazard Collector", "89.99€"]
-// var option6 = ["#325468", "Tekken 7 Edition Collector Deluxe Premium", "299.99€"]
+// Déclaration des 6 options (produits à vendre)
 
-// var select3 = document.getElementsByClassName("produit");
-// var td = document.querySelectorAll("td");
+var option1 = ["#463652", "Pack PS4 Slim Black 4K 2To", 399.99];
+var option2 = ["#654251", "World of Warcraft Edition Collector", 369.99]
+var option3 = ["#754125", "Marvel Spider Man", 69.99]
+var option4 = ["#895463", "Assasin's Creed Odyssey", 69.99]
+var option5 = ["#254879", "Resident Evil VII BioHazard Collector", 89.99]
+var option6 = ["#325468", "Tekken 7 Edition Collector Deluxe Premium", 299.99]
 
-// select3[0].innerHTML += "<option>" + option1 + "</option>";
-// select3[0].innerHTML += "<option>" + option2 + "</option>";
-// select3[0].innerHTML += "<option>" + option3 + "</option>";
-// select3[0].innerHTML += "<option>" + option4 + "</option>";
-// select3[0].innerHTML += "<option>" + option5 + "</option>";
-// select3[0].innerHTML += "<option>" + option6 + "</option>";
+// Appel des différents selecteurs
 
-// select3[1].innerHTML += "<option>" + option1 + "</option>";
-// select3[1].innerHTML += "<option>" + option2 + "</option>";
-// select3[1].innerHTML += "<option>" + option3 + "</option>";
-// select3[1].innerHTML += "<option>" + option4 + "</option>";
-// select3[1].innerHTML += "<option>" + option5 + "</option>";
-// select3[1].innerHTML += "<option>" + option6 + "</option>";
-
-// select3[2].innerHTML += "<option>" + option1 + "</option>";
-// select3[2].innerHTML += "<option>" + option2 + "</option>";
-// select3[2].innerHTML += "<option>" + option3 + "</option>";
-// select3[2].innerHTML += "<option>" + option4 + "</option>";
-// select3[2].innerHTML += "<option>" + option5 + "</option>";
-// select3[2].innerHTML += "<option>" + option6 + "</option>";
-
-// select3[3].innerHTML += "<option>" + option1 + "</option>";
-// select3[3].innerHTML += "<option>" + option2 + "</option>";
-// select3[3].innerHTML += "<option>" + option3 + "</option>";
-// select3[3].innerHTML += "<option>" + option4 + "</option>";
-// select3[3].innerHTML += "<option>" + option5 + "</option>";
-// select3[3].innerHTML += "<option>" + option6 + "</option>";
-
-// select3.onclick = function () {
-//     if (select3.value == 'option1') {
-//         td[0].value = option1.code;
-//         td[0].disabled = true;
-//         td[1].value = option1.libelle;
-//         td[1].disabled = true;
-//         td[2].value = option1.prix;
-//         td[2].disabled = true;
-//     }
-//     else if (select3.value == 'option2') {
-//         td[0].value = option2[0];
-//         td[0].disabled = true;
-//         td[1].value = option2[1];
-//         td[1].disabled = true;
-//         td[2].value = option2[2];
-//         td[2].disabled = true;
-//     }
-// };
-
-var libe1 = document.getElementById('libe1');
-var prix1 = document.getElementById('prix1');
 var sel = document.getElementById('produit');
 var sel2 = document.getElementById('produit2');
 var sel3 = document.getElementById('produit3');
 var sel4 = document.getElementById('produit4');
 
-function Produits(libe1, prix1) {
-    if (sel.value == "#463652") {
-        libe1.innerHTML = "Pack Ps4 Slim Black 4K 2To";
-        prix1.innerHTML = 399.99;
+// Affichage des options dans les selects
+
+sel.innerHTML += "<option>" + "#463652" + "</option>";
+sel.innerHTML += "<option>" + "#654251" + "</option>";
+sel.innerHTML += "<option>" + "#754125" + "</option>";
+sel.innerHTML += "<option>" + "#895463" + "</option>";
+sel.innerHTML += "<option>" + "#254879" + "</option>";
+sel.innerHTML += "<option>" + "#325468" + "</option>";
+
+sel2.innerHTML += "<option>" + "#463652" + "</option>";
+sel2.innerHTML += "<option>" + "#654251" + "</option>";
+sel2.innerHTML += "<option>" + "#754125" + "</option>";
+sel2.innerHTML += "<option>" + "#895463" + "</option>";
+sel2.innerHTML += "<option>" + "#254879" + "</option>";
+sel2.innerHTML += "<option>" + "#325468" + "</option>";
+
+sel3.innerHTML += "<option>" + "#463652" + "</option>";
+sel3.innerHTML += "<option>" + "#654251" + "</option>";
+sel3.innerHTML += "<option>" + "#754125" + "</option>";
+sel3.innerHTML += "<option>" + "#895463" + "</option>";
+sel3.innerHTML += "<option>" + "#254879" + "</option>";
+sel3.innerHTML += "<option>" + "#325468" + "</option>";
+
+sel4.innerHTML += "<option>" + "#463652" + "</option>";
+sel4.innerHTML += "<option>" + "#654251" + "</option>";
+sel4.innerHTML += "<option>" + "#754125" + "</option>";
+sel4.innerHTML += "<option>" + "#895463" + "</option>";
+sel4.innerHTML += "<option>" + "#254879" + "</option>";
+sel4.innerHTML += "<option>" + "#325468" + "</option>";
+
+
+// Var pour 'appeler' chaque cases du tableau où vont s'afficher les informations relatives aux produits.
+
+var libe1 = document.getElementById('libe1');
+var prix1 = document.getElementById('prix1');
+
+var libe2 = document.getElementById('libe2');
+var prix2 = document.getElementById('prix2');
+
+var libe3 = document.getElementById('libe3');
+var prix3 = document.getElementById('prix3');
+
+var libe4 = document.getElementById('libe4');
+var prix4 = document.getElementById('prix4');
+
+// Fonction pour remplir le libellé et le prix des produits (select)
+
+function Produits(sel, lib, select_valeur, prix, opt, i) {
+    if (sel.value == select_valeur) {
+        lib.innerHTML = opt[i];
+        i = i + 1;
+        prix.innerHTML = opt[i];
     }
 };
 
 sel.onclick = function () {
-    Produits(libe1, prix1);
+    Produits(sel, libe1, "#463652", prix1, option1, 1);
+    Produits(sel, libe1, "#654251", prix1, option2, 1);
+    Produits(sel, libe1, "#754125", prix1, option3, 1);
+    Produits(sel, libe1, "#895463", prix1, option4, 1);
+    Produits(sel, libe1, "#254879", prix1, option5, 1);
+    Produits(sel, libe1, "#325468", prix1, option6, 1);
+};
+
+sel2.onclick = function () {
+    Produits(sel2, libe2, "#463652", prix2, option1, 1);
+    Produits(sel2, libe2, "#654251", prix2, option2, 1);
+    Produits(sel2, libe2, "#754125", prix2, option3, 1);
+    Produits(sel2, libe2, "#895463", prix2, option4, 1);
+    Produits(sel2, libe2, "#254879", prix2, option5, 1);
+    Produits(sel2, libe2, "#325468", prix2, option6, 1);
+};
+
+sel3.onclick = function () {
+    Produits(sel3, libe3, "#463652", prix3, option1, 1);
+    Produits(sel3, libe3, "#654251", prix3, option2, 1);
+    Produits(sel3, libe3, "#754125", prix3, option3, 1);
+    Produits(sel3, libe3, "#895463", prix3, option4, 1);
+    Produits(sel3, libe3, "#254879", prix3, option5, 1);
+    Produits(sel3, libe3, "#325468", prix3, option6, 1);
+};
+
+sel4.onclick = function () {
+    Produits(sel4, libe4, "#463652", prix4, option1, 1);
+    Produits(sel4, libe4, "#654251", prix4, option2, 1);
+    Produits(sel4, libe4, "#754125", prix4, option3, 1);
+    Produits(sel4, libe4, "#895463", prix4, option4, 1);
+    Produits(sel4, libe4, "#254879", prix4, option5, 1);
+    Produits(sel4, libe4, "#325468", prix4, option6, 1);
+};
+
+// Calcul du prix * la quantité pour retourner/remplir le montant
+
+var montant = document.getElementById('montant');
+var quantite = document.getElementById('nbr');
+var prix = document.getElementById('prix1');
+
+var montant2 = document.getElementById('montant2');
+var quantite2 = document.getElementById('nbr2');
+var prix2 = document.getElementById('prix2');
+
+var montant3 = document.getElementById('montant3');
+var quantite3 = document.getElementById('nbr3');
+var prix3 = document.getElementById('prix3');
+
+var montant4 = document.getElementById('montant4');
+var quantite4 = document.getElementById('nbr4');
+var prix4 = document.getElementById('prix4');
+
+function calcul(mont, quant, p) {
+   var x = Number(quant.value) * Number(p.innerHTML);
+   mont.innerHTML = x.toFixed(2);
+   sous()
 }
+
+quantite.onclick = function(){
+   calcul(montant, quantite, prix);
+}
+
+quantite2.onkeyup = function(){
+   calcul(montant2, quantite2, prix2);
+}
+
+quantite3.onkeyup = function(){
+   calcul(montant3, quantite3, prix3);
+}
+
+quantite4.onkeyup = function(){
+   calcul(montant4, quantite4, prix4);
+}
+
+var sousT = document.getElementById('ss');
+
+function sous(){
+   var x = Number(montant.innerHTML) + Number(montant2.innerHTML) + Number(montant3.innerHTML) +Number(montant4.innerHTML);
+   sousT.innerHTML = x.toFixed(2);
+}
+var tv = document.getElementById('tva');
+
+function tva(){
+
+};
 
 
 //Boutton imprimer

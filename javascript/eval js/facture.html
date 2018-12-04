@@ -88,96 +88,72 @@
                     <th>Montant en euros</th>
                 </tr>
             </thead>
-
-            <tbody>
-                    <tr>
-
-                            <td>
-         
-                                <select id="produit">
-         
-                                    <option>#463652
-         
-         </option>
-         
-                                    <option>#654251
-         
-         </option>
-         
-                                    <option>#754125
-         
-         </option>
-         
-                                    <option>#895463
-         
-         </option>
-         
-                                    <option>#254879
-         
-         </option>
-         
-                                    <option>#325468
-         
-         </option>
-         
-                                </select>
-         
-                            </td>
-         
-                            <td id="libe1"></td>
-         
-                            <td id="prix1"></td>
-         
-                            <td>
-         
-                                <input type="text" placeholder="0">
-         
-                            </td>
-         
-                            <td></td>
-         
-                        </tr>
-                    <td>
-                        <select class="produit"></select>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <input type="number" placeholder="0">
-                    </td>
-                    <td></td>
-                </tr>
-            </tbody>
-
             <tbody>
                 <tr>
                     <td>
-                        <select class="produit"></select>
+                        <select id="produit">
+                            <option></option>
+                        </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td id="libe1"></td>
+                    <td id="prix1"></td>
                     <td>
-                        <input type="number" placeholder="0">
+                        <input id="nbr" type="number" placeholder="0">
                     </td>
-                    <td></td>
+                    <td id="montant"></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <select id="produit2">
+                            <option></option>
+                        </select>
+                    </td>
+                    <td id="libe2"></td>
+                    <td id="prix2"></td>
+                    <td>
+                        <input id="nbr2" type="number" placeholder="0">
+                    </td>
+                    <td id="montant2"></td>
+                </tr>
+
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>
+                        <select id="produit3">
+                            <option></option>
+                        </select>
+                    </td>
+                    <td id="libe3"></td>
+                    <td id="prix3"></td>
+                    <td>
+                        <input id="nbr3" type="number" placeholder="0">
+                    </td>
+                    <td id="montant3"></td>
                 </tr>
             </tbody>
-
             <tfoot>
                 <tr>
                     <td>
-                        <select class="produit"></select>
+                        <select id="produit4">
+                            <option></option>
+                        </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td id="libe4"></td>
+                    <td id="prix4"></td>
                     <td>
-                        <input type="number" placeholder="0">
+                        <input id="nbr4" type="number" placeholder="0">
                     </td>
-                    <td></td>
+                    <td id="montant4"></td>
                 </tr>
             </tfoot>
         </table>
     </main>
+
+    <!-- Fin du Tableaux des produits-->
+
+    <!-- Partie :  Sous-total,t.v.a etc -->
 
     <div class="clear"></div>
     <br>
@@ -193,12 +169,11 @@
             <p>port & manutention</p>
             <p>total du (total ttc)</p>
         </div>
-        <div class="clear"></div>
         <div id="div">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div id="ss"></div>
+            <div id="tva"></div>
+            <div id="port"></div>
+            <div id="total"></div>
         </div>
     </div>
 
@@ -220,7 +195,8 @@
 
         <p>Veuillez rédiger tous les chèques à l'ordre de <input id="redigerCheque" type="text" placeholder="Nom de la societe"></p>
 
-        <p>Pour toute question concernant cette facture, veuillez contacter : DUPONT au <input id="telephone" type="text" placeholder="Numéro de téléphone">
+        <p>Pour toute question concernant cette facture, veuillez contacter : DUPONT au <input id="telephone" type="text"
+                placeholder="Numéro de téléphone">
             ou à l'adresse <input id="adresse" type="text" placeholder="Adresse"></p>
 
         <br>
