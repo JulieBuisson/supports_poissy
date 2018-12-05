@@ -17,6 +17,7 @@
 
     </header>
 
+    <!-- Partie  : Information sur la société émetrices-->
 
     <div id="texte">
         <ul>
@@ -35,9 +36,9 @@
         <select name="Year" id="annee"></select>
 
     </div>
-
+<!-- fin de la partie des informatiob sur la société émetrices-->
     <div class="clear"></div>
-
+<!-- Partie pour définir les clients : Nom de la société, adresse etc-->
     <section>
 
         <div id="client">
@@ -73,9 +74,9 @@
         </div>
 
     </section>
-
+<!-- fin de la partie deéfinir les clients-->
     <div class="clear"></div>
-
+<!-- Tableaux des poduits-->
     <main>
         <table>
             <caption>Détails des produits facturés</caption>
@@ -88,6 +89,7 @@
                     <th>Montant en euros</th>
                 </tr>
             </thead>
+
             <tbody>
                 <tr>
                     <td>
@@ -102,7 +104,6 @@
                     </td>
                     <td id="montant"></td>
                 </tr>
-
                 <tr>
                     <td>
                         <select id="produit2">
@@ -116,8 +117,8 @@
                     </td>
                     <td id="montant2"></td>
                 </tr>
-
             </tbody>
+
             <tbody>
                 <tr>
                     <td>
@@ -133,6 +134,7 @@
                     <td id="montant3"></td>
                 </tr>
             </tbody>
+
             <tfoot>
                 <tr>
                     <td>
@@ -150,11 +152,8 @@
             </tfoot>
         </table>
     </main>
-
-    <!-- Fin du Tableaux des produits-->
-
-    <!-- Partie :  Sous-total,t.v.a etc -->
-
+<!-- Fin du Tableaux des produits-->
+<!-- Partie :  Sous-total,t.v.a etc -->
     <div class="clear"></div>
     <br>
     <br>
@@ -169,6 +168,7 @@
             <p>port & manutention</p>
             <p>total du (total ttc)</p>
         </div>
+        
         <div id="div">
             <div id="ss"></div>
             <div id="tva"></div>
@@ -180,23 +180,18 @@
     <div class="clear"></div>
 
     <div id="remise">
-
-        <p>N.B. Votre facture a depassé 1000€, vous avez obtenu pour votre prochaine facture une remise de :
-
-            représentant 5% de votre commande ci-dessus</p>
-
+        <p>N.B. Votre facture a depassé 1000€, vous avez obtenu pour votre prochaine facture une remise de :<span id="remise5"></span>€, représentant 5% de votre commande ci-dessus</p>
     </div>
-
+<!-- fin de la partie : Sous-total,t.v.a etc -->
     <br>
 
     <br>
 
     <footer>
 
-        <p>Veuillez rédiger tous les chèques à l'ordre de <input id="redigerCheque" type="text" placeholder="Nom de la societe"></p>
+        <p>Veuillez rédiger tous les chèques à l'ordre de <input  id="redigerCheque" type="text" placeholder="Nom de la societe"></p>
 
-        <p>Pour toute question concernant cette facture, veuillez contacter : DUPONT au <input id="telephone" type="text"
-                placeholder="Numéro de téléphone">
+        <p>Pour toute question concernant cette facture, veuillez contacter : DUPONT au <input id="telephone" type="text" placeholder="Numéro de téléphone">
             ou à l'adresse <input id="adresse" type="text" placeholder="Adresse"></p>
 
         <br>
@@ -211,18 +206,15 @@
 
         <form>
 
-            <div>
-                <button name="B1" onclick="imprimer()">Imprimer cette page</button>
-            </div>
+            <div><button name="B1" onclick="imprimer()">Imprimer cette page</button></div>
 
         </form>
-
     </footer>
 
     </div>
 
 
-    <script src="facture.js"></script>
+    <script src="js/facture.js"></script>
 
 </body>
 
