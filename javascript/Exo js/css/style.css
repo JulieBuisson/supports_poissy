@@ -1,0 +1,30 @@
+.container{
+    margin-top: 2%;
+}
+
+.display-4{
+    text-align: center;
+}
+
+h4{
+    width: 45%;
+    border-bottom: 1px solid lightgrey;
+}
+
+form{
+    float: left;
+}
+
+table{
+    float: right;
+    margin-top: -55px;
+}
+
+label{
+    display: inline-flex;
+}
+
+.form-control{
+    padding-right: 12.75rem;
+    margin-left: 15px;
+}

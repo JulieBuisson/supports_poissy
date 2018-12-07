@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="jumbotron">
+                <h1 class="display-4">Gestion de mes Contacts</h1>
+            </div>
+        </header>
+
+        <main>
+
+            <h4>Ajouter un Contact</h4>
+
+            <form class="col-6">
+                <div class="form-group">
+                    <label for="InputNom">Nom
+                        <input type="text" class="form-control" id="name" placeholder="Nom"></label>
+                </div>
+                <div class="form-group">
+                    <label for="InputPrenom">Prénom
+                        <input type="text" class="form-control" id="prenom"  placeholder="Prénom"></label>
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail">Email
+                        <input type="email" class="form-control" id="email" placeholder="Email"></label>
+                </div>
+                <div class="form-group">
+                    <label for="InputTel">Tel
+                        <input type="text" class="form-control" id="telephone" placeholder="Téléphone"></label>
+                </div>
+                <button type="submit" class="btn btn-primary">Ajouter le Contact</button>
+            </form>
+
+            <table class="table col-6">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Email</th>
+                        <th>Téléphone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--A commenter jusqu'à la ligne 64 pour faire fonctionner le code de Sonia-->
+                    <tr>
+                        <td class="ligne"></td>
+                        <td class="ligne"></td>
+                        <td class="ligne"></td>
+                        <td class="ligne"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </main>
+
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+</body>
+
+</html>
