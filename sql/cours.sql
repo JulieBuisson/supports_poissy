@@ -823,12 +823,13 @@ SELECT auteur AS 'liste personne physique' FROM livre UNION SELECT prenom FROM a
 +-------------------------+
 
 -- LES FONCTIONS
+
 -- les fonctions prédéfinies
 SELECT CURDATE(); --affiche la date courante
 SELECT CURDATE() +0; -- affiche la date courante sans tiret
 SELECT CURTIME(); -- affiche l'heure courante
 SELECT NOW(); -- affiche la date et l'heure courante
-SELECT DATE_ADD('2018-12-13', INTERVAL 31 DAY); -- affiche la sate future avec 31 jours de plus
+SELECT DATE_ADD('2018-12-13', INTERVAL 31 DAY); -- affiche la date future avec 31 jours de plus
 SELECT DATE_FORMAT('2018-12-13 17:02:00', '%d/%m/%Y - %H:%i:%s'); --redefini le format de la sate (format fr dans l'exemple)
 SELECT *, DATE_FORMAT(date_rendu, 'le %d/%m/%Y') FROM emprunt;
 SELECT CONCAT('a','b','c'); -- permet de concaténer
@@ -844,3 +845,5 @@ SELECT TRIM('                bonsoir'); -- permet de supprimer les espaces en d�
 SELECT DATABASE();
 SELECT LAST_INSERT_ID(); -- indique quel est le dernier identifiant généré par une base de données (après une requête INSERT)
 SELECT PASSWORD('mypass'); -- permet de hacher le mdp
+
+-- LES FONCTIONS UTILISATEURS
