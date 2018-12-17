@@ -601,7 +601,6 @@ WHERE s.id_stagiaire = m.id_stagiaire;
 --45-- Calculer combien de bonbons ont été mangés au total par chaque stagiaire et afficher le nombre de fois où ils ont mangé
 
 
-
 --46-- Afficher combien de bonbons ont été consommés au total
 
 SELECT SUM(quantite) FROM manger;
@@ -613,6 +612,16 @@ SELECT SUM(quantite) FROM manger;
 
 --47-- Afficher le total de *Tagada* consommées
 
+SELECT SUM(m.quantite) AS 'nb tagada manger'
+FROM stagiaire s, manger m, bonbon b
+WHERE s.id_stagiaire = m.id_stagiaire
+AND b.id_bonbon = m.id_bonbon
+AND b.nom LIKE '%tagada%';
++------------------+
+| nb tagada manger |
++------------------+
+|               10 |
++------------------+
 
 --48-- Afficher les prénoms des stagiaires qui n'ont rien mangé
 
@@ -634,3 +643,5 @@ SELECT DISTINCT(saveur) FROM bonbon;
 
 --50-- Afficher le prénom du stagiaire qui a mangé le plus de bonbons
 
+SELECT MAX(m.quantite), s.prenom
+FROM stagiaire s, manger m;
